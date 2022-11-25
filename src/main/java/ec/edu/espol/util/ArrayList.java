@@ -14,9 +14,13 @@ import java.util.Objects;
  */
 public class ArrayList <E> implements List <E>, Iterable<E>{
     private E[] arreglo;
-    private int capacidad;
+    private int capacidad=100;
     private int tam;
     
+    
+    public ArrayList(){
+        arreglo=(E[]) new Object[capacidad];
+    }
     public ArrayList(int capacidad){
         this.capacidad = capacidad;
         arreglo =  (E[]) new Object[capacidad];
@@ -167,10 +171,7 @@ public class ArrayList <E> implements List <E>, Iterable<E>{
 
     @Override
     public boolean isEmpty() {
-        if (tam==0){
-            return true;
-        }
-        return false;
+        return tam==0;
     }
 
     @Override
