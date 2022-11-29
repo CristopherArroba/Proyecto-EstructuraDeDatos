@@ -93,7 +93,8 @@ public class ArrayList <E> implements List <E>, Iterable<E>{
             return -1;
         }
         if (e==null){
-            return 0;
+            return 0;//revisar porque al retornar cero, se estaría dicicendo que si está en la posicion cero
+            //sería -1, tambien?
         }
         for (int i =0; i<tam;i++){
             if (arreglo[i]==e){
