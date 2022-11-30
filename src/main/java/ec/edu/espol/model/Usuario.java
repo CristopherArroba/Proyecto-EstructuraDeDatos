@@ -95,7 +95,7 @@ public class Usuario {
         return "Usuario{" + "nickname=" + nickname + ", correo=" + correo + ", juegos=" + juegos + ", generos=" + generos + '}';
     }
     
-    public static void guardarPeliculas(ArrayList<Usuario> usuarios, String nomfile){
+    public static void guardarUsuario(ArrayList<Usuario> usuarios, String nomfile){
         try(FileOutputStream file = new FileOutputStream(nomfile);
                 ObjectOutputStream out = new ObjectOutputStream(file)){
             out.writeObject(usuarios);
@@ -105,7 +105,7 @@ public class Usuario {
             System.out.println(e.getMessage());
         }
     }
-    public static ArrayList<Usuario> leerPeliculas(String nomfile){
+    public static ArrayList<Usuario> leerUsuario(String nomfile){
         try(FileInputStream file = new FileInputStream(nomfile);
                 ObjectInputStream in = new ObjectInputStream(file)){
             ArrayList<Usuario> peliculas =  (ArrayList<Usuario>)in.readObject();
