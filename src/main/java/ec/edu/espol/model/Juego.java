@@ -6,13 +6,19 @@ package ec.edu.espol.model;
 
 
 import ec.edu.espol.util.ArrayList;
+import ec.edu.espol.util.CircularDoubleLinkedList;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import javafx.scene.image.ImageView;
 
 /**
  *
  * @author dannymateo
  */
-public class Juego {
+public class Juego implements Serializable{
 
     private String titulo;
     private String anio;
@@ -21,6 +27,7 @@ public class Juego {
     private ArrayList<Resena> reseña;
     private String generos;
     private String compania;
+    private static final long serialVersionUID = 8799656478674716638L;
 
     public Juego(String titulo, String anio, String descripcion, double precio, ArrayList reseña, String generos, String compania) {
         this.titulo = titulo;
@@ -97,5 +104,34 @@ public class Juego {
     public String toString() {
         return "Juego{" + "Titulo: " + titulo + ", Anio: " + anio + ", reseña=" + reseña + ", Descripcion: " + descripcion + '}';
     }
+    
+    public static CircularDoubleLinkedList<Juego> leerJuegos(String nomfile){
+        try(FileInputStream file = new FileInputStream(nomfile);
+                ObjectInputStream in = new ObjectInputStream(file)){
+            CircularDoubleLinkedList<Juego> juegosA =  (CircularDoubleLinkedList<Juego>)in.readObject();
+            return juegosA;
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return new CircularDoubleLinkedList<>();
+    }
+    
+    public static void guardarJuegos(CircularDoubleLinkedList<Juego> juegos, String nomfile){
+        try(FileOutputStream file = new FileOutputStream(nomfile);
 
+                ObjectOutputStream out = new ObjectOutputStream(file)){
+            out.writeObject(juegos);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    
+    
+    
+    
 }
