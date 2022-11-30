@@ -24,18 +24,18 @@ public class Juego implements Serializable{
     private String anio;
     private String descripcion;
     private double precio;
-    private ArrayList<Resena> reseña;
-    private String generos;
+    private ArrayList<Resena> resena;
+    private String genero;
     private String compania;
     private static final long serialVersionUID = 8799656478674716638L;
 
-    public Juego(String titulo, String anio, String descripcion, double precio, ArrayList reseña, String generos, String compania) {
+    public Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania) {
         this.titulo = titulo;
         this.anio = anio;
         this.descripcion = descripcion;
         this.precio = precio;
-        this.reseña = reseña;
-        this.generos = generos;
+        this.resena = resena;
+        this.genero = genero;
         this.compania = compania;
     }
 
@@ -55,20 +55,20 @@ public class Juego implements Serializable{
         this.precio = precio;
     }
 
-    public String getGeneros() {
-        return generos;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setGeneros(String generos) {
-        this.generos = generos;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
-    public ArrayList<Resena> getReseña() {
-        return reseña;
+    public ArrayList<Resena> getResena() {
+        return resena;
     }
 
-    public void setReseña(ArrayList<Resena> reseña) {
-        this.reseña = reseña;
+    public void setResena(ArrayList<Resena> resena) {
+        this.resena = resena;
     }
 
     public String getCompania() {
@@ -102,7 +102,7 @@ public class Juego implements Serializable{
 
     @Override
     public String toString() {
-        return "Juego{" + "Titulo: " + titulo + ", Anio: " + anio + ", reseña=" + reseña + ", Descripcion: " + descripcion + '}';
+        return "Juego{" + "Titulo: " + titulo + ", Anio: " + anio + ", reseña=" + resena + ", Descripcion: " + descripcion + '}';
     }
     
     public static CircularDoubleLinkedList<Juego> leerJuegos(String nomfile){
