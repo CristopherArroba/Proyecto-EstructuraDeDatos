@@ -4,7 +4,8 @@
  */
 package ec.edu.espol.model;
 
-import java.util.ArrayList;
+
+import ec.edu.espol.util.ArrayList;
 import javafx.scene.image.ImageView;
 
 /**
@@ -17,11 +18,11 @@ public class Juego {
     private String anio;
     private String descripcion;
     private double precio;
-    private ArrayList reseña;
+    private ArrayList<Resena> reseña;
     private String generos;
-    private Compañia compania;
+    private String compania;
 
-    public Juego(String titulo, String anio, String descripcion, double precio, ArrayList reseña, String generos, Compañia compania) {
+    public Juego(String titulo, String anio, String descripcion, double precio, ArrayList reseña, String generos, String compania) {
         this.titulo = titulo;
         this.anio = anio;
         this.descripcion = descripcion;
@@ -55,13 +56,24 @@ public class Juego {
         this.generos = generos;
     }
 
-    public Compañia getCompania() {
+    public ArrayList<Resena> getReseña() {
+        return reseña;
+    }
+
+    public void setReseña(ArrayList<Resena> reseña) {
+        this.reseña = reseña;
+    }
+
+    public String getCompania() {
         return compania;
     }
 
-    public void setCompania(Compañia compania) {
+    public void setCompania(String compania) {
         this.compania = compania;
     }
+
+    
+    
 
     public String getTitulo() {
         return titulo;
@@ -79,13 +91,7 @@ public class Juego {
         this.descripcion = descripcion;
     }
 
-    public ArrayList getReseña() {
-        return reseña;
-    }
-
-    public void setReseña(ArrayList reseña) {
-        this.reseña = reseña;
-    }
+    
 
     @Override
     public String toString() {
