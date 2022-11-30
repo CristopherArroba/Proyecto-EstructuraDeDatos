@@ -5,6 +5,7 @@
  */
 package ec.edu.espol.util;
 
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.ListIterator;
 
@@ -12,7 +13,7 @@ import java.util.ListIterator;
  *
  * @author user
  */
-public class CircularDoubleLinkedList <E> implements List<E>{
+public class CircularDoubleLinkedList <E> implements List<E>, Serializable{
     private Node<E> last;
     private Node<E> first;
     private int tam;
@@ -24,7 +25,7 @@ public class CircularDoubleLinkedList <E> implements List<E>{
     }
    
     
-     private class Node<E>{
+     private class Node<E> implements Serializable{
         private E contenido;
         private Node<E> siguiente;
         private Node<E> anterior;
