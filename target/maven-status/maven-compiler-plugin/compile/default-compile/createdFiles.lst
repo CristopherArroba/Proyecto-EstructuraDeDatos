@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ec\edu\espol\model\Reseña.class
 ec\edu\espol\model\Validaciones.class
 ec\edu\espol\util\CircularDoubleLinkedList$1.class
@@ -20,3 +21,9 @@ ec\edu\espol\util\Archivos.class
 ec\edu\espol\model\Compañia.class
 ec\edu\espol\model\Usuario.class
 ec\edu\espol\controller\VistaUsuarioNormalController.class
+=======
+ec\edu\espol\proyectoestructuradedatos\SecondaryController.class
+ec\edu\espol\proyectoestructuradedatos\App.class
+module-info.class
+ec\edu\espol\proyectoestructuradedatos\PrimaryController.class
+>>>>>>> 63b6886c6cbc9d1ba1e65bb0b98c672739a260b2

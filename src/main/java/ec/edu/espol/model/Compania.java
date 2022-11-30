@@ -4,23 +4,27 @@
  */
 package ec.edu.espol.model;
 
-import java.util.ArrayList;
+import ec.edu.espol.util.ArrayList;
+
+
 
 /**
  *
  * @author dannymateo
  */
-class Compañia {
+public class Compania {
     
     private String nombre;
-    private ArrayList juegos;
-    private ArrayList reseñas;
+    private ArrayList<Juego> juegos;
+    private ArrayList<Resena> resenas;
 
-    public Compañia(String nombre, ArrayList juegos, ArrayList reseñas) {
+    public Compania(String nombre, ArrayList juegos, ArrayList resenas) {
         this.nombre = nombre;
         this.juegos = juegos;
-        this.reseñas = reseñas;
+        this.resenas = resenas;
     }
+
+    
 
     public String getNombre() {
         return nombre;
@@ -39,11 +43,11 @@ class Compañia {
     }
 
     public ArrayList getReseñas() {
-        return reseñas;
+        return resenas;
     }
 
     public void setReseñas(ArrayList reseñas) {
-        this.reseñas = reseñas;
+        this.resenas = reseñas;
     }
     
     

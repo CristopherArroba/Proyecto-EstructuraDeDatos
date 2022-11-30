@@ -4,43 +4,44 @@
  */
 package ec.edu.espol.model;
 
-import ec.edu.espol.model.Compañia;
+import ec.edu.espol.model.Compania;
 import ec.edu.espol.model.Juego;
 
 /**
  *
  * @author dannymateo
  */
-public class Reseña {
+public class Resena {
     
-    private Compañia autor;
-    private Juego juego;
+    private String compania;
+    private String juego;
     private int valoracion;
     private String comentario;
 
-    public Reseña(Compañia autor, Juego juego, int valoracion, String comentario) {
-        this.autor = autor;
+    public Resena(String autor, String juego, int valoracion, String comentario) {
+        this.compania = autor;
         this.juego = juego;
         this.valoracion = valoracion;
         this.comentario = comentario;
     }
 
-    public Compañia getAutor() {
-        return autor;
+    public String getCompania() {
+        return compania;
     }
 
-    public void setAutor(Compañia autor) {
-        this.autor = autor;
+    public void setCompania(String compania) {
+        this.compania = compania;
     }
 
-    public Juego getJuego() {
+    public String getJuego() {
         return juego;
     }
 
-    public void setJuego(Juego juego) {
+    public void setJuego(String juego) {
         this.juego = juego;
     }
 
+    
     public int getValoracion() {
         return valoracion;
     }

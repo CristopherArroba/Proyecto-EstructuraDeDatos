@@ -4,6 +4,7 @@
  */
 package ec.edu.espol.model;
 
+
 import ec.edu.espol.proyectoestructuradedatos.App;
 import ec.edu.espol.util.ArrayList;
 import java.io.BufferedReader;
@@ -14,6 +15,9 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import ec.edu.espol.util.ArrayList;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
@@ -104,8 +108,9 @@ public class Usuario {
 
     
     
-    public static void guardarUsuario(ArrayList<Usuario> usuarios){
-        try(FileOutputStream file = new FileOutputStream(App.pathFile+"usuarios.txt");
+    public static void guardarUsuario(ArrayList<Usuario> usuarios, String nomfile){
+        try(FileOutputStream file = new FileOutputStream(nomfile);
+
                 ObjectOutputStream out = new ObjectOutputStream(file)){
             out.writeObject(usuarios);
         }
@@ -114,6 +119,7 @@ public class Usuario {
             System.out.println(e.getMessage());
         }
     }
+
     
     public static void escribirUsuario(Usuario u)  {
         try(BufferedWriter bf=new BufferedWriter(new FileWriter(App.pathFile+"usuarios.txt",true))){
@@ -125,8 +131,10 @@ public class Usuario {
         }
     }
     
-    public static ArrayList<Usuario> leerUsuario(){
-        try(FileInputStream file = new FileInputStream(App.pathFile+"usuarios.txt");
+    
+
+    public static ArrayList<Usuario> leerUsuario(String nomfile){
+        try(FileInputStream file = new FileInputStream(nomfile);
                 ObjectInputStream in = new ObjectInputStream(file)){
             ArrayList<Usuario> peliculas =  (ArrayList<Usuario>)in.readObject();
             return peliculas;
@@ -137,10 +145,11 @@ public class Usuario {
         }
         return new ArrayList<>();
     }
-    
+
     
     
     
     
     
 }
+
