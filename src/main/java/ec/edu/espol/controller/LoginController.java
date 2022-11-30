@@ -41,7 +41,7 @@ public class LoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        lista=Usuario.leerUsuario();
+        lista=Usuario.leerUsuario(App.pathFile+"usuario.txt");
         
         
         
