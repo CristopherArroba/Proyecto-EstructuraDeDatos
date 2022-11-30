@@ -17,7 +17,10 @@ public class Main1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        List<Juego> juegos = new ArrayList<Juego>();
+        ArrayList<Resena> r=Resena.leerResena();
+        for(Resena re: r){
+            System.out.println(re);
+        }
     
      //Collections.sort(juegos, AnioComparator);
     }

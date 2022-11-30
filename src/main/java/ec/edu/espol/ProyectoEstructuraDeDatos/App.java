@@ -1,10 +1,12 @@
 package ec.edu.espol.proyectoestructuradedatos;
 
         
+import ec.edu.espol.model.Compania;
 import ec.edu.espol.util.Archivos;
 
 
 import ec.edu.espol.model.Juego;
+import ec.edu.espol.model.Resena;
 
 
 import ec.edu.espol.util.ArrayList;
@@ -27,7 +29,7 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("Registro"));
+        scene = new Scene(loadFXML("VistaPrincipal"));
         stage.setScene(scene);        
         stage.show();
     }
@@ -53,14 +55,20 @@ public class App extends Application {
     }
        
     public static void main(String[] args) {
-       /*
+       
         ArrayList<Juego> juegos1 = new ArrayList<>();
         ArrayList<Juego> juegos2 = new ArrayList<>();
         ArrayList<Juego> juegos3 = new ArrayList<>();
         ArrayList<Juego> juegos4 = new ArrayList<>();
         
-        ArrayList<Resena> resenas = new ArrayList<>();
+        ArrayList<Resena> resenas =Resena.leerResena();
+            
+        for(Resena r: resenas){
+            System.out.println(r);
+        }
         
+        
+       
         Compania comp1 = new Compania("Sega", juegos1, resenas);
         Compania comp2 = new Compania("Capcom", juegos2, resenas);
         Compania comp3 = new Compania("Nintendo", juegos3, resenas);
@@ -75,35 +83,32 @@ public class App extends Application {
         Juego juego7 = new Juego("Resident evil", "2019", "es solo un civil con pocas habilidades especiales de lucha, y sin ningún entrenamiento de combate policial o militar, aun así es capaz de usar un considerable repertorio de armas", 35, resenas, "terror", "Capcom");
         Juego juego8 = new Juego("Dragon's Dogma", "2012", "nos permite explorar un mundo abierto, resolver misiones y derrotar bestias fantásticas acompañados de Peones, unos personajes que se pueden compartir con las funciones online.", 15, resenas, "accion", "Capcom");
         Juego juego9 = new Juego("Street Fighter", "2009", "¡Un nuevo rival ha subido al ring! Controla a los mejores 32 guerreros del planeta y pon a prueba tu coraje enfrentándote a jugadores de todo el mundo.", 28, resenas, "pelea", "Capcom");
-        Juego juego10 = new Juego("Zack y Wiki", "2008", "un juego inspirado en las aventuras gráficas clásicas que utilizó los sensores de movimiento para la resolución de puzles.", 19, resenas, "aventura", "Capcom");
-        */
-//        Juego juego11 = new Juego("", "", "", 0, resenas, "", "Nintendo");
-//        Juego juego12 = new Juego("", "", "", 0, resenas, "", "Nintendo");
-//        Juego juego13 = new Juego("", "", "", 0, resenas, "", "Nintendo");
-//        Juego juego14 = new Juego("", "", "", 0, resenas, "", "Nintendo");
-//        Juego juego15 = new Juego("", "", "", 0, resenas, "", "Nintendo");
-//        Juego juego16 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
-//        Juego juego17 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
-//        Juego juego18 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
-//        Juego juego19 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
-//        Juego juego20 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
+        Juego juego10 = new Juego("Zack y Wiki", "2008", "un juego inspirado en las aventuras gráficas clásicas que utilizó los sensores de movimiento para la resolución de puzles.", 19, resenas, "aventura", "Capcom");        
+        Juego juego11 = new Juego("", "", "", 0, resenas, "", "Nintendo");
+        Juego juego12 = new Juego("", "", "", 0, resenas, "", "Nintendo");
+        Juego juego13 = new Juego("", "", "", 0, resenas, "", "Nintendo");
+        Juego juego14 = new Juego("", "", "", 0, resenas, "", "Nintendo");
+        Juego juego15 = new Juego("", "", "", 0, resenas, "", "Nintendo");
+        Juego juego16 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
+        Juego juego17 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
+        Juego juego18 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
+        Juego juego19 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
+        Juego juego20 = new Juego("", "", "", 0, resenas, "", "Ubisoft");
         
 
-        /*juegos1.addLast(juego1);
+        juegos1.addLast(juego1);
         juegos1.addLast(juego2);
         juegos1.addLast(juego3);
         juegos1.addLast(juego4);
         juegos1.addLast(juego5);
+
         juegos2.addLast(juego6);
         juegos2.addLast(juego7);
         juegos2.addLast(juego8);
         juegos2.addLast(juego9);
-        juegos2.addLast(juego10);*/
-        
-        
-        launch();
-        
-        
+        juegos2.addLast(juego10);
+      
+        //launch();
     }
 //Prueba finalizada
 }

@@ -6,6 +6,14 @@ package ec.edu.espol.model;
 
 import ec.edu.espol.model.Compania;
 import ec.edu.espol.model.Juego;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import ec.edu.espol.util.ArrayList;
+import ec.edu.espol.proyectoestructuradedatos.App;
+import javafx.scene.control.Alert;
+
 
 /**
  *
@@ -56,6 +64,29 @@ public class Resena {
 
     public void setComentario(String comentario) {
         this.comentario = comentario;
+    }
+
+    @Override
+    public String toString() {
+        return compania + "|" + juego + "|"+ valoracion + "|" + comentario ;
+    }
+
+    public static ArrayList<Resena> leerResena(){
+        ArrayList<Resena> ListRese=new ArrayList<>();
+        try(BufferedReader bf=new BufferedReader(new FileReader(App.pathFile+"Resena.txt"))){
+            String linea;
+            while((linea=bf.readLine())!=null){
+                String[] dato=linea.split("\\|");
+                Resena r=new Resena(dato[0],dato[1],Integer.parseInt(dato[2]),dato[3]);
+                ListRese.addLast(r);
+                        
+                                
+            }            
+        }catch (IOException ex) {
+            Alert a = new Alert(Alert.AlertType.ERROR, "No es posible obtener los usuarios");
+            a.show();
+        }
+        return ListRese;
     }
     
     
