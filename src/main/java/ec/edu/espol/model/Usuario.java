@@ -20,12 +20,13 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 /**
  *
  * @author User
  */
-public class Usuario {
+public class Usuario implements Serializable{
     private String nickname;
     private String correo;
     private String contraseña;
