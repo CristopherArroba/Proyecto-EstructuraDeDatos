@@ -1,0 +1,1 @@
+scabezas,scabezas@espol.edu.ec,1234,false,false,Accion,Arcade,Deportivo,Estrategia,Simulacion,Juegos de mesa,Guerra,combate

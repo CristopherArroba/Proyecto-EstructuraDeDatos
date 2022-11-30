@@ -1,0 +1,12 @@
+.root{
+    -fx-background-image: url("/img/fondo.png"); 
+    -fx-background-repeat: no-repeat; 
+  
+    
+    -fx-background-size: contain;
+    -fx-background-attachment: scroll;
+    
+}
+
+
+
