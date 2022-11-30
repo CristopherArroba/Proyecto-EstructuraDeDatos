@@ -6,7 +6,7 @@ package ec.edu.espol.model;
 
 
 import ec.edu.espol.proyectoestructuradedatos.App;
-import ec.edu.espol.util.ArrayList;
+//import ec.edu.espol.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
@@ -108,7 +108,7 @@ public class Usuario {
 
     
     
-    public static void guardarUsuario(ArrayList<Usuario> usuarios, String nomfile){
+    public static void guardarUsuarios(ArrayList<Usuario> usuarios, String nomfile){
         try(FileOutputStream file = new FileOutputStream(nomfile);
 
                 ObjectOutputStream out = new ObjectOutputStream(file)){
@@ -133,11 +133,11 @@ public class Usuario {
     
     
 
-    public static ArrayList<Usuario> leerUsuario(String nomfile){
+    public static ArrayList<Usuario> leerUsuarios(String nomfile){
         try(FileInputStream file = new FileInputStream(nomfile);
                 ObjectInputStream in = new ObjectInputStream(file)){
-            ArrayList<Usuario> peliculas =  (ArrayList<Usuario>)in.readObject();
-            return peliculas;
+            ArrayList<Usuario> usuarios =  (ArrayList<Usuario>)in.readObject();
+            return usuarios;
         }
         catch(Exception e)
         {

@@ -6,6 +6,10 @@ package ec.edu.espol.model;
 
 
 import ec.edu.espol.util.ArrayList;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import javafx.scene.image.ImageView;
 
 /**
@@ -97,5 +101,34 @@ public class Juego {
     public String toString() {
         return "Juego{" + "Titulo: " + titulo + ", Anio: " + anio + ", reseña=" + reseña + ", Descripcion: " + descripcion + '}';
     }
+    
+    public static ArrayList<Juego> leerJuegos(String nomfile){
+        try(FileInputStream file = new FileInputStream(nomfile);
+                ObjectInputStream in = new ObjectInputStream(file)){
+            ArrayList<Juego> juegosA =  (ArrayList<Juego>)in.readObject();
+            return juegosA;
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return new ArrayList<>();
+    }
+    
+    public static void guardarJuegos(ArrayList<Juego> juegos, String nomfile){
+        try(FileOutputStream file = new FileOutputStream(nomfile);
 
+                ObjectOutputStream out = new ObjectOutputStream(file)){
+            out.writeObject(juegos);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    
+    
+    
+    
 }
