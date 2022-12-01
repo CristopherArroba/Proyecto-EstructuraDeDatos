@@ -5,11 +5,15 @@
 package ec.edu.espol.controller;
 
 import ec.edu.espol.model.Juego;
+import ec.edu.espol.proyectoestructuradedatos.App;
 import ec.edu.espol.util.ArrayList;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -67,6 +71,13 @@ public class VistaJuegoController implements Initializable {
 
     @FXML
     private void regresar(MouseEvent event) {
+        try {
+                FXMLLoader fxmlloader = App.loadFXMLLoader("VistaPrincipal");
+                App.setRoot(fxmlloader);
+            } catch (IOException ex) {
+                Alert a = new Alert(Alert.AlertType.ERROR,"No se pudo abrir el archivo del siguiente grafo de scene");
+                a.show();
+            }
     }
     
 }
