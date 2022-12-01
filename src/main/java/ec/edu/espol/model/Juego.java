@@ -123,6 +123,7 @@ public class Juego implements Serializable{
 
                 ObjectOutputStream out = new ObjectOutputStream(file)){
             out.writeObject(juegos);
+            out.flush();
         }
         catch(Exception e)
         {

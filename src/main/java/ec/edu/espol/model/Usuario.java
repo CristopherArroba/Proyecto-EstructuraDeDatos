@@ -34,7 +34,7 @@ public class Usuario implements Serializable{
     private Boolean esAdministrador;
     private ArrayList<Juego> juegos;
     private ArrayList<String> generos;
-    private static final long serialVersionUID = 8799656478674716638L;
+    //private static final long serialVersionUID = 8799656478674716638L;
 
     public Usuario(String nickname, String correo, String contraseña, Boolean esCritico, Boolean esAdministrador, ArrayList<String> generos) {
         this.nickname = nickname;

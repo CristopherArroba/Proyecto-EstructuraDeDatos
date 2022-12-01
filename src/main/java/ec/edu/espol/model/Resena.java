@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import ec.edu.espol.util.ArrayList;
 import ec.edu.espol.proyectoestructuradedatos.App;
+import java.io.Serializable;
 import javafx.scene.control.Alert;
 
 
@@ -19,12 +20,14 @@ import javafx.scene.control.Alert;
  *
  * @author dannymateo
  */
-public class Resena {
+public class Resena implements Serializable{
     
     private String compania;
     private String juego;
     private int valoracion;
     private String comentario;
+    //private static final long serialVersionUID = 8799656478674716638L;
+
 
     public Resena(String autor, String juego, int valoracion, String comentario) {
         this.compania = autor;
