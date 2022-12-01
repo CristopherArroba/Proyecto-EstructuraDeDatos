@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controller.VistaJuegoController">
+   <content>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="580.0" spacing="20.0">
+         <children>
+            <Text fx:id="tit" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="JUSTIFY" wrappingWidth="82.13676452636719">
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+            </Text>
+            <ScrollPane prefHeight="234.0" prefWidth="580.0">
+               <content>
+                  <HBox fx:id="himage" prefHeight="165.0" prefWidth="554.0" />
+               </content>
+            </ScrollPane>
+            <Button fx:id="bregresar" mnemonicParsing="false" onMouseClicked="#regresar" text="Regresar">
+               <VBox.margin>
+                  <Insets left="270.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

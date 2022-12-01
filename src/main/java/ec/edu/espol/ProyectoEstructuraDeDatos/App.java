@@ -62,7 +62,7 @@ public class App extends Application {
 //        ArrayList<Juego> juegos3 = new ArrayList<>();
 //        ArrayList<Juego> juegos4 = new ArrayList<>();
 //        
-//        ArrayList<Resena> resenas =Resena.leerResena();
+        ArrayList<Resena> resenas =Resena.leerResena();
             //ArrayList<Resena> resenas = new ArrayList<>();
 //        for(Resena r: resenas){
 //            System.out.println(r);
@@ -74,21 +74,17 @@ public class App extends Application {
 //        Compania comp2 = new Compania("Capcom", juegos2, resenas);
 //        Compania comp3 = new Compania("Nintendo", juegos3, resenas);
 //        Compania comp4 = new Compania("Ubisoft", juegos4, resenas);
-<<<<<<< HEAD
-//        
-=======
-        
->>>>>>> f8e49619cb4d5408377aec9d1ae1ddc53dffeabc
-//        Juego juego1 = new Juego("NBA Jam", "2010", "hagamos un 2 contra 2, a híper velocidad, con las mejores parejas de cada equipo. No estaba Michael Jordan, OK. Pero sí estaban Reggie Miller, Isiah Thomas, Pippen, Ewing, Larry Johnson, Charles Barkley, Kemp, Mutombo, Olajuwon, Divac y la dupla Stockton-Malone.", 10, resenas, "deporte", "Sega");
-//        Juego juego2 = new Juego("Mortal Kombat II", "2011", "Más violencia, más sangre (bastante más sangre), más personajes, más escenarios. Nuevos modos de fatalities (la Babality o la Friendship, por ejemplo). Baraka, Mileena, Kitana, Kung Lao, entre otros, se suman al repertorio de luchadores.", 0, resenas, "pelea", "Sega");
-//        Juego juego3 = new Juego("Dragon ball z", "2012", "modo historia o al modo vs y elegir entre los once guerreros: Goku, Vegeta, Trunks, Gohan, Piccoro, Nro 18, Freezer, Cell, el Capitán Ginyu y Reecome y Krillin.", 20, resenas, "pelea", "Sega");
-//        Juego juego4 = new Juego("Out-run", "2013", "El camino se dividía en dos y dependiendo de la elección se modificaba la ruta, el nivel de dificultad de las carreras y la secuencia del final.", 30, resenas, "carrera", "Sega");
-//        Juego juego5 = new Juego("VirtualBart", "2000", "Seis minijuegos. El esquizoide Dino-Bart. El Baby-Bart saltando entre ramas. El Chancho-Bart en el matadero de Krusty. El tobogán acuático. La carrera en pleno holocausto nuclear. Y el más divertido de todos: Tomato Doom. ", 5, resenas, "accion", "Sega");
-//        Juego juego6 = new Juego("Monster Hunter", "2018", "Monster Hunter por fin evolucionaba, pulía su jugabilidad, las criaturas resultaban tan impactantes como deberían y no perdía la exigencia o profundidad característica de las sagas anteriores", 25, resenas, "aventura", "Capcom");
-//        Juego juego7 = new Juego("Resident evil", "2019", "es solo un civil con pocas habilidades especiales de lucha, y sin ningún entrenamiento de combate policial o militar, aun así es capaz de usar un considerable repertorio de armas", 35, resenas, "terror", "Capcom");
-//        Juego juego8 = new Juego("Dragon's Dogma", "2012", "nos permite explorar un mundo abierto, resolver misiones y derrotar bestias fantásticas acompañados de Peones, unos personajes que se pueden compartir con las funciones online.", 15, resenas, "accion", "Capcom");
-//        Juego juego9 = new Juego("Street Fighter", "2009", "¡Un nuevo rival ha subido al ring! Controla a los mejores 32 guerreros del planeta y pon a prueba tu coraje enfrentándote a jugadores de todo el mundo.", 28, resenas, "pelea", "Capcom");
-//        Juego juego10 = new Juego("Zack y Wiki", "2008", "un juego inspirado en las aventuras gráficas clásicas que utilizó los sensores de movimiento para la resolución de puzles.", 19, resenas, "aventura", "Capcom");        
+
+        Juego juego1 = new Juego("NBA Jam", "2010", "hagamos un 2 contra 2, a híper velocidad, con las mejores parejas de cada equipo. No estaba Michael Jordan, OK. Pero sí estaban Reggie Miller, Isiah Thomas, Pippen, Ewing, Larry Johnson, Charles Barkley, Kemp, Mutombo, Olajuwon, Divac y la dupla Stockton-Malone.", 10, resenas, "deporte", "Sega");
+        Juego juego2 = new Juego("Mortal Kombat II", "2011", "Más violencia, más sangre (bastante más sangre), más personajes, más escenarios. Nuevos modos de fatalities (la Babality o la Friendship, por ejemplo). Baraka, Mileena, Kitana, Kung Lao, entre otros, se suman al repertorio de luchadores.", 0, resenas, "pelea", "Sega");
+        Juego juego3 = new Juego("Dragon ball z", "2012", "modo historia o al modo vs y elegir entre los once guerreros: Goku, Vegeta, Trunks, Gohan, Piccoro, Nro 18, Freezer, Cell, el Capitán Ginyu y Reecome y Krillin.", 20, resenas, "pelea", "Sega");
+        Juego juego4 = new Juego("Out-run", "2013", "El camino se dividía en dos y dependiendo de la elección se modificaba la ruta, el nivel de dificultad de las carreras y la secuencia del final.", 30, resenas, "carrera", "Sega");
+        Juego juego5 = new Juego("VirtualBart", "2000", "Seis minijuegos. El esquizoide Dino-Bart. El Baby-Bart saltando entre ramas. El Chancho-Bart en el matadero de Krusty. El tobogán acuático. La carrera en pleno holocausto nuclear. Y el más divertido de todos: Tomato Doom. ", 5, resenas, "accion", "Sega");
+        Juego juego6 = new Juego("Monster Hunter", "2018", "Monster Hunter por fin evolucionaba, pulía su jugabilidad, las criaturas resultaban tan impactantes como deberían y no perdía la exigencia o profundidad característica de las sagas anteriores", 25, resenas, "aventura", "Capcom");
+        Juego juego7 = new Juego("Resident evil", "2019", "es solo un civil con pocas habilidades especiales de lucha, y sin ningún entrenamiento de combate policial o militar, aun así es capaz de usar un considerable repertorio de armas", 35, resenas, "terror", "Capcom");
+        Juego juego8 = new Juego("Dragon's Dogma", "2012", "nos permite explorar un mundo abierto, resolver misiones y derrotar bestias fantásticas acompañados de Peones, unos personajes que se pueden compartir con las funciones online.", 15, resenas, "accion", "Capcom");
+        Juego juego9 = new Juego("Street Fighter", "2009", "¡Un nuevo rival ha subido al ring! Controla a los mejores 32 guerreros del planeta y pon a prueba tu coraje enfrentándote a jugadores de todo el mundo.", 28, resenas, "pelea", "Capcom");
+        Juego juego10 = new Juego("Zack y Wiki", "2008", "un juego inspirado en las aventuras gráficas clásicas que utilizó los sensores de movimiento para la resolución de puzles.", 19, resenas, "aventura", "Capcom");        
 //        Juego juego11 = new Juego("", "", "", 0, resenas, "", "Nintendo");
 //        Juego juego12 = new Juego("", "", "", 0, resenas, "", "Nintendo");
 //        Juego juego13 = new Juego("", "", "", 0, resenas, "", "Nintendo");
@@ -115,31 +111,28 @@ public class App extends Application {
         
         //Añadir al archivo serializado los juegos
         
-<<<<<<< HEAD
+
         CircularDoubleLinkedList<Juego> juegosP = Juego.leerJuegos("juegos.ser");
-        
-=======
-//        CircularDoubleLinkedList<Juego> juegosP = Juego.leerJuegos("juegos.ser");
 //        
->>>>>>> f8e49619cb4d5408377aec9d1ae1ddc53dffeabc
-//        juegosP.addLast(juego1);
-//        juegosP.addLast(juego2);
-//        juegosP.addLast(juego3);
-//        juegosP.addLast(juego4);
-//        juegosP.addLast(juego5);
-//
-//        juegosP.addLast(juego6);
-//        juegosP.addLast(juego7);
-//        juegosP.addLast(juego8);
-//        juegosP.addLast(juego9);
-//        juegosP.addLast(juego10);
-<<<<<<< HEAD
+
+        juegosP.addLast(juego1);
+        juegosP.addLast(juego2);
+        juegosP.addLast(juego3);
+        juegosP.addLast(juego4);
+        juegosP.addLast(juego5);
+
+        juegosP.addLast(juego6);
+        juegosP.addLast(juego7);
+        juegosP.addLast(juego8);
+        juegosP.addLast(juego9);
+        juegosP.addLast(juego10);
+
         
         Juego.guardarJuegos(juegosP,"juegos.ser");
-=======
+
 //        
 //        Juego.guardarJuegos(juegosP,"juegos.ser");
->>>>>>> f8e49619cb4d5408377aec9d1ae1ddc53dffeabc
+
 //        CircularDoubleLinkedList<Juego> juegos1 = Juego.leerJuegos("juegos.ser");
 //        System.out.println(juegos1);
         launch();
