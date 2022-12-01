@@ -25,7 +25,7 @@ public class Compania {
     }
 
     
-
+    
     public String getNombre() {
         return nombre;
     }
