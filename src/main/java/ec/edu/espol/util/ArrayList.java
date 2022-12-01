@@ -5,6 +5,7 @@
  */
 package ec.edu.espol.util;
 
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.Objects;
 
@@ -12,10 +13,11 @@ import java.util.Objects;
  *
  * @author user
  */
-public class ArrayList <E> implements List <E>, Iterable<E>{
+public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
     private E[] arreglo;
     private int capacidad=100;
     private int tam;
+    //private static final long serialVersionUID = 8799656478674716638L;
     
     
     public ArrayList(){

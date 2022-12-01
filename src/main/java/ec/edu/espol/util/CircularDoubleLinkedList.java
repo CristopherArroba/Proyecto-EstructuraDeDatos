@@ -17,6 +17,7 @@ public class CircularDoubleLinkedList <E> implements List<E>, Serializable{
     private Node<E> last;
     private Node<E> first;
     private int tam;
+    //private static final long serialVersionUID = 8799656478674716638L;
     
     public CircularDoubleLinkedList(){
         last=null;
@@ -29,13 +30,23 @@ public class CircularDoubleLinkedList <E> implements List<E>, Serializable{
         private E contenido;
         private Node<E> siguiente;
         private Node<E> anterior;
+        //private static final long serialVersionUID = 8799656478674716638L;
         
         public Node(E e){
             this.contenido=e;
             this.siguiente=null;
             this.anterior=null;
         }
-    }
+        public Node<E> getNext(){
+            return siguiente;
+            
+        }
+        public E getContent(){
+            return contenido;
+            
+        }
+     }
+    
       public Node <E> getNode(int index){
         if(index==0){
             return first;
@@ -328,5 +339,21 @@ public class CircularDoubleLinkedList <E> implements List<E>, Serializable{
         n1.anterior=n;
         tam--;
         return true; 
+    }
+
+    @Override
+    public String toString() {
+//        for (Node<E> n = this.first; n != null; n = n.getNext()){
+        //// n es el nodo actual
+        //E content = n.getContent();
+        String s = "";
+        int i = 0;
+        for (Node<E> n = this.first; n != null && i < tam; n = n.getNext()){
+            s += n.getContent() + " ";
+            i++;
+//        return "CircularDoubleLinkedList{" + '}';
+        }
+        
+    return s;
     }
 }

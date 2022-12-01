@@ -5,6 +5,7 @@
 package ec.edu.espol.controller;
 
 import ec.edu.espol.model.Juego;
+import ec.edu.espol.proyectoestructuradedatos.App;
 import ec.edu.espol.util.CircularDoubleLinkedList;
 import java.net.URL;
 import java.util.ListIterator;
@@ -31,8 +32,9 @@ public class PrincipalController implements Initializable {
     private ImageView imv;
     
     private CircularDoubleLinkedList<Juego> juegos = Juego.leerJuegos("juegos.ser");
+//    
     private ListIterator<Juego> lit = juegos.listIterator();
-    //private Node<Juego> nodo = juegos.getNode(0);
+//    //private Node<Juego> nodo = juegos.getNode(0);
     Juego j = lit.next();
     /**
      * Initializes the controller class.
@@ -43,11 +45,15 @@ public class PrincipalController implements Initializable {
         //CircularDoubleLinkedList<Juego> juegos = Juego.leerJuegos("juegos.ser");
 //        for(int k = 0; k<juegos.size(); k++){
 //            Juego j = juegos.get(k);
-//            Image i = new Image("img."+juegos.get(k).getTitulo()+"/"+juegos.get(k).getTitulo()+"-cap1");
+        //    Image i = new Image("img."+juegos.get(k).getTitulo()+"/"+juegos.get(k).getTitulo()+"-cap1");
 //            imv.setImage(i);
-        Image i = new Image("img."+j.getTitulo()+"/"+j.getTitulo()+"-cap1");
+        //System.out.println(juegos);
+        Image i = new Image("img/"+j.getTitulo()+"/"+j.getTitulo()+"-cap1.jpg");
+        //Image i = new Image("img/Mortal Kombat II/Mortal Kombat II-cap1.jpg");
         imv.setImage(i);
-            
+       // CircularDoubleLinkedList<Juego> juegos = Juego.leerJuegos("juegos.ser");
+        //System.out.println(juegos);
+        //System.out.println("img."+j.getTitulo()+"/"+j.getTitulo()+"-cap1");
         
         
     }    
@@ -55,14 +61,14 @@ public class PrincipalController implements Initializable {
     @FXML
     private void retroceder(MouseEvent event) {
         j = lit.previous();
-        Image i = new Image("img."+j.getTitulo()+"/"+j.getTitulo()+"-cap1");
+        Image i = new Image("img/"+j.getTitulo()+"/"+j.getTitulo()+"-cap1.jpg");
         imv.setImage(i);
     }
 
     @FXML
     private void avanzar(MouseEvent event) {
         j = lit.next();
-        Image i = new Image("img."+j.getTitulo()+"/"+j.getTitulo()+"-cap1");
+        Image i = new Image("img/"+j.getTitulo()+"/"+j.getTitulo()+"-cap1.jpg");
         imv.setImage(i);
     }
 
