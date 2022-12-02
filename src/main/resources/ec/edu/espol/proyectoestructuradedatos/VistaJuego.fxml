@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controller.VistaJuegoController">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controller.VistaJuegoController">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" opacity="0.86" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" styleClass="root" stylesheets="@Style.css">
          <children>
@@ -31,10 +31,10 @@
                         <Font name="Franklin Gothic Book" size="17.0" />
                      </font>
                   </Text>
-                  <ComboBox fx:id="comboBoxOrdenar" prefWidth="150.0" promptText="ordenar por:" />
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                  <ComboBox fx:id="comboBoxOrdenar" onAction="#CambiarResena" prefWidth="150.0" promptText="ordenar por:" />
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="277.0" prefWidth="580.0" vbarPolicy="ALWAYS">
                      <content>
-                        <VBox fx:id="idVboxResena" prefHeight="81.0" prefWidth="566.0" spacing="10.0" style="-fx-background-color: #343454;" />
+                        <VBox fx:id="idVboxResena" prefHeight="105.0" prefWidth="566.0" spacing="10.0" style="-fx-background-color: #343454;" />
                      </content>
                   </ScrollPane>
                   <Button fx:id="bregresar" mnemonicParsing="false" onMouseClicked="#regresar" text="Regresar">

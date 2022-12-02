@@ -59,6 +59,7 @@ public class VistaPrincipalController implements Initializable {
     private TextField buscador;
     @FXML
     private VBox vboxID;
+    private  ArrayList<Resena> ListaRese;
 
     private void buscar(MouseEvent event) {
         String bus = buscador.getText().toString();
@@ -68,10 +69,10 @@ public class VistaPrincipalController implements Initializable {
         
         Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
         
-        List<Juego> j1 = leerJuegos("juegos.txt").findAll(jt, new TituloComparator());
+        List<Juego> j1 = leerJuegos("Juego.txt").findAll(jt, new TituloComparator());
 
         Juego jA = new Juego("", bus, "", 0, resenas, "", "");
-        List<Juego> j2 = leerJuegos("juegos.txt").findAll(jA, new AnioComparator());
+        List<Juego> j2 = leerJuegos("Juego.txt").findAll(jA, new AnioComparator());
 
         String[] busparts = bus.split(" ");
         String part1 = busparts[0];
@@ -95,6 +96,7 @@ public class VistaPrincipalController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         Image i = new Image("img/"+j.getTitulo()+"/"+j.getTitulo()+"-cap1.jpg");
         imv.setImage(i);
+        this.ListaRese=Resena.leerResena();
     }    
 
     @FXML
@@ -117,7 +119,10 @@ public class VistaPrincipalController implements Initializable {
                 FXMLLoader fxmlloader = App.loadFXMLLoader("VistaJuego");
                 App.setRoot(fxmlloader);
                 VistaJuegoController vjc = fxmlloader.getController();             
-                vjc.cargarImagen(j);         
+                vjc.cargarImagen(j);   
+                vjc.setTitulo(j.getTitulo());
+                ArrayList<Resena> lista=Juego.ResenaxJuego(j.getTitulo(), ListaRese);
+                vjc.dibujar(lista);
             } catch (IOException ex) {
                 Alert a = new Alert(AlertType.ERROR,"No se pudo abrir el archivo del siguiente grafo de scene");
                 a.show();
