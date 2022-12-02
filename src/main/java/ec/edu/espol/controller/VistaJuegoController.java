@@ -28,6 +28,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 /**
@@ -56,6 +57,8 @@ public class VistaJuegoController implements Initializable {
     private  ArrayList<Resena> ListaRese;
     
     private ArrayList<Resena> listausada=new ArrayList<>();
+    @FXML
+    private Text descriptionID;
 
     /**
      * Initializes the controller class.
@@ -72,11 +75,18 @@ public class VistaJuegoController implements Initializable {
        }
        
        
+       
+       
     }
     
     public void setTitulo(String titulo){
         this.tit1.setText(titulo);
     }
+    
+    public void setLabels(String description){
+        descriptionID.setText(description);
+    }
+    
     
     
     
@@ -129,8 +139,10 @@ public class VistaJuegoController implements Initializable {
         for(Resena r: lista){
             Label t1=new Label();
             t1.setText(r.getCompania());
+            t1.setFont(new Font("Franklin Gothic Book",16));
+            t1.setStyle("-fx-text-fill: white");
             nombreUsado.addLast(r.getJuego());
-
+            
             int numEstrell = r.getValoracion();
             HBox h=new HBox();
             for(int j=0; j<numEstrell; j++){
@@ -142,6 +154,7 @@ public class VistaJuegoController implements Initializable {
             }
             Text t2 = new Text();
             t2.setText(r.getComentario());
+            t2.setFont(new Font("Franklin Gothic Book",14));
             idVboxResena.getChildren().addAll(t1,h,t2);
         }
         listausada=lista;
@@ -182,47 +195,40 @@ public class VistaJuegoController implements Initializable {
             presena2.offer(r);
         }
         if (item.equals("Mejor Calificación")) {
-            while (!presena.isEmpty()) {
-                Resena r = presena.poll();
-                Label t1 = new Label();
-                t1.setText(r.getCompania());
-
-                int numEstrell = r.getValoracion();
-                HBox h = new HBox();
-                for (int j = 0; j < numEstrell; j++) {
-                    Image i = new Image("img/estrella.jpg");
-                    ImageView imv = new ImageView(i);
-                    imv.setFitWidth(20);
-                    imv.setFitHeight(20);
-                    h.getChildren().add(imv);
-                }
-                Text t2 = new Text();
-                t2.setText(r.getComentario());
-                idVboxResena.getChildren().addAll(t1, h, t2);
-            }
+            Metodo(presena);
+            
         } else if (item.equals("Peor Calificación")) {
-            while (!presena2.isEmpty()) {
-                Resena r = presena2.poll();
-                Label t1 = new Label();
-                t1.setText(r.getCompania());
-
-                int numEstrell = r.getValoracion();
-                HBox h = new HBox();
-                for (int j = 0; j < numEstrell; j++) {
-                    Image i = new Image("img/estrella.jpg");
-                    ImageView imv = new ImageView(i);
-                    imv.setFitWidth(20);
-                    imv.setFitHeight(20);
-                    h.getChildren().add(imv);
-                }
-                Text t2 = new Text();
-                t2.setText(r.getComentario());
-                idVboxResena.getChildren().addAll(t1, h, t2);
-            }
+           Metodo(presena2);
         }else{
             dibujar(listanueva);
         }
 
     }
+    
+    
+    public void Metodo(PriorityQueue<Resena>presena2){
+        while (!presena2.isEmpty()) {
+                Resena r = presena2.poll();
+                Label t1 = new Label();
+                t1.setText(r.getCompania());
+                t1.setFont(new Font("Franklin Gothic Book",16));
+                t1.setStyle("-fx-text-fill: white");
+                int numEstrell = r.getValoracion();
+                HBox h = new HBox();
+                for (int j = 0; j < numEstrell; j++) {
+                    Image i = new Image("img/estrella.jpg");
+                    ImageView imv = new ImageView(i);
+                    imv.setFitWidth(20);
+                    imv.setFitHeight(20);
+                    h.getChildren().add(imv);
+                }
+                Text t2 = new Text();
+                t2.setText(r.getComentario());
+                t2.setFont(new Font("Franklin Gothic Book",14));
+                idVboxResena.getChildren().addAll(t1, h, t2);
+            }
+        
+    }
 
 }
+
