@@ -28,12 +28,13 @@ import javafx.scene.text.Text;
  */
 public class VistaJuegoController implements Initializable {
 
-    @FXML
     private Text tit;
     @FXML
     private HBox himage;
     @FXML
     private Button bregresar;
+    @FXML
+    private Text tit1;
 
     /**
      * Initializes the controller class.
@@ -44,7 +45,7 @@ public class VistaJuegoController implements Initializable {
     }
 
     public void cargarImagen(Juego j){
-        tit.setText(j.getTitulo());
+        tit1.setText(j.getTitulo());
 //        ArrayList<String> num = new ArrayList<>();
 //        num.addLast("1");
 //        num.addLast("2");
