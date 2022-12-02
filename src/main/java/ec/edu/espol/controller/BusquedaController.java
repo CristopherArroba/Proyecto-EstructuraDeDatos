@@ -75,40 +75,69 @@ public class BusquedaController implements Initializable {
     private void buscando(MouseEvent event) {
         String bus = TxtBusqueda.getText();
         ArrayList<Resena> resenas = Resena.leerResena();
-        
+
         // Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania)
-        
-        Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
-        //System.out.println(jt);
-        List<Juego> j1 = Juego.leerJuegos("juegos.ser").findAll(jt, new TituloComparator());
-//        List<Juego> j2 = Juego.leerJuegos("juegos.ser").findGreater(jt, new TituloComparator());
-//        List<Juego> j3 = Juego.leerJuegos("juegos.ser").findLower(jt, new TituloComparator());
-//        System.out.println(j1);
-//        j1.concatenar(j2);
-//        System.out.println(j2);
-//        j1.concatenar(j3);
-//        System.out.println(j3);
-//        List<Juego> j4 = j1.eliminarRepetidos();
-//        System.out.println(j4);
-        
-        for(int j = 1; j<=j1.size(); j++){
-            Juego ju = j1.get(j);
-            Image i = new Image("img/"+ju.getTitulo()+"/"+ju.getTitulo()+"-cap1.jpg");
-            ImageView imv = new ImageView(i);
-            imv.setFitWidth(400);
-            imv.setFitHeight(200);
-            imv.setOnMouseClicked((MouseEvent e)->{
-                tit.setText(ju.getTitulo());
-                desc.setText(ju.getDescripcion());
-                
-                
-                desc.setWrappingWidth(200);
-                desc.setTextAlignment(TextAlignment.JUSTIFY);
-                
-            
-            });
-            vboximg.getChildren().add(imv);
-        }   
+        if (bus.startsWith("19") || bus.startsWith("20")) {
+            Juego ja = new Juego("", bus, "", 0, resenas, "", "");
+            List<Juego> jA = Juego.leerJuegos("juegos.ser").findAll(ja, new AnioComparator());
+            for (int j = 1; j <= jA.size(); j++) {
+                Juego ju = jA.get(j);
+                Image i = new Image("img/" + ju.getTitulo() + "/" + ju.getTitulo() + "-cap1.jpg");
+                ImageView imv = new ImageView(i);
+                imv.setFitWidth(400);
+                imv.setFitHeight(200);
+                imv.setOnMouseClicked((MouseEvent e) -> {
+                    tit.setText(ju.getTitulo());
+                    desc.setText(ju.getDescripcion());
+
+                    desc.setWrappingWidth(200);
+                    desc.setTextAlignment(TextAlignment.JUSTIFY);
+
+                });
+                vboximg.getChildren().add(imv);
+            }
+        } else if (bus.startsWith("$")) {
+            bus = bus.replace("$", "");
+            double precio = Double.parseDouble(bus);
+            Juego jp = new Juego("", "", "", precio, resenas, "", "");
+            List<Juego> jP = Juego.leerJuegos("juegos.ser").findAll(jp, new PrecioComparator());
+            for (int j = 1; j <= jP.size(); j++) {
+                Juego ju = jP.get(j);
+                Image i = new Image("img/" + ju.getTitulo() + "/" + ju.getTitulo() + "-cap1.jpg");
+                ImageView imv = new ImageView(i);
+                imv.setFitWidth(400);
+                imv.setFitHeight(200);
+                imv.setOnMouseClicked((MouseEvent e) -> {
+                    tit.setText(ju.getTitulo());
+                    desc.setText(ju.getDescripcion());
+
+                    desc.setWrappingWidth(200);
+                    desc.setTextAlignment(TextAlignment.JUSTIFY);
+
+                });
+                vboximg.getChildren().add(imv);
+            }
+        } else {
+            Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
+            //System.out.println(jt);
+            List<Juego> j1 = Juego.leerJuegos("juegos.ser").findAll(jt, new TituloComparator());
+            for (int j = 1; j <= j1.size(); j++) {
+                Juego ju = j1.get(j);
+                Image i = new Image("img/" + ju.getTitulo() + "/" + ju.getTitulo() + "-cap1.jpg");
+                ImageView imv = new ImageView(i);
+                imv.setFitWidth(400);
+                imv.setFitHeight(200);
+                imv.setOnMouseClicked((MouseEvent e) -> {
+                    tit.setText(ju.getTitulo());
+                    desc.setText(ju.getDescripcion());
+
+                    desc.setWrappingWidth(200);
+                    desc.setTextAlignment(TextAlignment.JUSTIFY);
+
+                });
+                vboximg.getChildren().add(imv);
+            }
+        }
     }
 
     @FXML
