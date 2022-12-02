@@ -30,11 +30,11 @@ public class Juego implements Serializable{
     private double precio;
     private ArrayList<Resena> resena;
     private String genero;
-
-    private static final long serialVersionUID = 8799656478674716638L;
-
-
     private String compania;
+    //private static final long serialVersionUID = 8799656478674716638L;
+
+
+    
     //private static final long serialVersionUID = 8799656478674716638L;
 
 
@@ -46,6 +46,7 @@ public class Juego implements Serializable{
         this.precio = precio;
         this.resena = resena;
         this.genero = genero;
+        this.compania = compania;
     }
 
     public String getAnio() {
