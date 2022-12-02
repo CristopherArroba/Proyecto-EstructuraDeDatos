@@ -69,10 +69,17 @@ public class VistaPrincipalController implements Initializable {
         
         Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
         
+
         List<Juego> j1 = leerJuegos("Juego.txt").findAll(jt, new TituloComparator());
 
         Juego jA = new Juego("", bus, "", 0, resenas, "", "");
         List<Juego> j2 = leerJuegos("Juego.txt").findAll(jA, new AnioComparator());
+
+        List<Juego> j1 = Juego.leerJuegos("juegos.ser").findAll(jt, new TituloComparator());
+        System.out.println(j1.getFirst().toString());
+        Juego jA = new Juego("", bus, "", 0, resenas, "", "");
+        List<Juego> j2 = Juego.leerJuegos("juegos.ser").findAll(jA, new AnioComparator());
+
 
         String[] busparts = bus.split(" ");
         String part1 = busparts[0];
@@ -80,8 +87,9 @@ public class VistaPrincipalController implements Initializable {
         String part2 = busparts[1];
 
         Juego jAT = new Juego(part1, part2, "", 0, resenas, "", "");
-        List<Juego> j3 = leerJuegos("juegos.txt").findAll(jAT, new AnioTituloComparator());
-        
+        List<Juego> j3 = Juego.leerJuegos("juegos.ser").findAll(jAT, new AnioTituloComparator());
+        Alert a = new Alert(AlertType.INFORMATION, j1.toString());
+
     }
     
     private CircularDoubleLinkedList<Juego> juegos = Juego.leerJuegos("juegos.ser");
@@ -151,7 +159,27 @@ public class VistaPrincipalController implements Initializable {
     }
 
     @FXML
-    private void buscar(ActionEvent event) {
+    private void buscando(MouseEvent event) {
+        String bus = buscador.getText().toString();
+        ArrayList<Resena> resenas = Resena.leerResena();
+        
+        // Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania)
+        
+        Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
+        
+        List<Juego> j1 = Juego.leerJuegos("juegos.ser").findAll(jt, new TituloComparator());
+        System.out.println(j1.getFirst().toString());
+        Juego jA = new Juego("", bus, "", 0, resenas, "", "");
+        List<Juego> j2 = Juego.leerJuegos("juegos.ser").findAll(jA, new AnioComparator());
+
+        String[] busparts = bus.split(" ");
+        String part1 = busparts[0];
+
+        String part2 = busparts[1];
+
+        Juego jAT = new Juego(part1, part2, "", 0, resenas, "", "");
+        List<Juego> j3 = Juego.leerJuegos("juegos.ser").findAll(jAT, new AnioTituloComparator());
+        Alert a = new Alert(AlertType.INFORMATION, j1.toString());
     }
     
 }
