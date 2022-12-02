@@ -44,7 +44,7 @@ public class Juego implements Serializable{
         this.anio = anio;
         this.descripcion = descripcion;
         this.precio = precio;
-        this.resena = resena;
+        this.resena = new ArrayList<>();
         this.genero = genero;
         this.compania = compania;
     }
@@ -139,7 +139,7 @@ public class Juego implements Serializable{
                 bf.close();
             
         } catch (IOException ex) {
-            System.out.println("No se pudo guardar en el archivo paciente");;
+            System.out.println("No se pudo guardar en el archivo");
         }
     }
 

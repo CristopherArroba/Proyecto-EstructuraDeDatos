@@ -110,7 +110,7 @@ public class Usuario implements Serializable{
     
     
     public static void guardarUsuarios(ArrayList<Usuario> usuarios, String nomfile){
-        try(FileOutputStream file = new FileOutputStream(nomfile);
+        try(FileOutputStream file = new FileOutputStream(App.pathFile+nomfile);
 
                 ObjectOutputStream out = new ObjectOutputStream(file)){
             out.writeObject(usuarios);
@@ -124,6 +124,7 @@ public class Usuario implements Serializable{
     
     public static void escribirUsuario(Usuario u)  {
         try(BufferedWriter bf=new BufferedWriter(new FileWriter(App.pathFile+"usuarios.txt",true))){
+            //Faltan datos en el archivo
                 bf.write(u.getNickname()+","+u.getCorreo()+","+u.getContraseña()+","+u.getEsCritico()+","+u.getEsAdministrador()+","+u.getGeneros());
                 bf.newLine();
                 bf.close();
@@ -132,10 +133,25 @@ public class Usuario implements Serializable{
         }
     }
     
-    
+//    public static ArrayList<Usuario> leerUsuario()  {
+//        ArrayList<Usuario> usuarios = new ArrayList<>();
+//        try(BufferedReader br=new BufferedReader(new FileReader(App.pathFile+"usuarios.txt"))){
+//                String line;
+//                while((line = br.readLine()) != null){
+//                    String[] tokens = line.split(",");
+//                    Usuario u = new Usuario(tokens[0],tokens[1],tokens[2],(Boolean) tokens[3],tokens[4],tokens[5],tokens[6]);
+//                    
+//                    
+//                }
+//                br.close();
+//        } catch (IOException ex) {
+//            System.out.println("No se pudo escribir en el archivo usuario");;
+//        }
+//    }
+//    
 
     public static ArrayList<Usuario> leerUsuarios(String nomfile){
-        try(FileInputStream file = new FileInputStream(nomfile);
+        try(FileInputStream file = new FileInputStream(App.pathFile+nomfile);
                 ObjectInputStream in = new ObjectInputStream(file)){
             ArrayList<Usuario> usuarios =  (ArrayList<Usuario>)in.readObject();
             return usuarios;
