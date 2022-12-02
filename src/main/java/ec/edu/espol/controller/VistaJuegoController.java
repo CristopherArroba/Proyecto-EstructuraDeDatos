@@ -10,6 +10,8 @@ import ec.edu.espol.proyectoestructuradedatos.App;
 import ec.edu.espol.util.ArrayList;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Iterator;
+import java.util.PriorityQueue;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -35,6 +37,7 @@ import javafx.scene.text.Text;
  */
 public class VistaJuegoController implements Initializable {
 
+    private ArrayList<String> nombreUsado=new ArrayList<>();
     private Text tit;
     @FXML
     private HBox himage;
@@ -51,6 +54,8 @@ public class VistaJuegoController implements Initializable {
     @FXML
     private VBox vboxprin;
     private  ArrayList<Resena> ListaRese;
+    
+    private ArrayList<Resena> listausada=new ArrayList<>();
 
     /**
      * Initializes the controller class.
@@ -59,8 +64,14 @@ public class VistaJuegoController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
        comboBoxOrdenar.getItems().add("Mejor Calificación");
        comboBoxOrdenar.getItems().add("Peor Calificación");
+       comboBoxOrdenar.getItems().add("Ninguno");
+       ListaRese=Resena.leerResena();
        
-        
+       for(Resena r: listausada){
+           System.out.println(r);
+       }
+       
+       
     }
     
     public void setTitulo(String titulo){
@@ -108,12 +119,17 @@ public class VistaJuegoController implements Initializable {
             }
     }
     
+    public void getlistaUsada(ArrayList<Resena> resena){
+        for(Resena r:resena){
+            listausada.addLast(r);
+        }
+    }
+    
     public void dibujar(ArrayList<Resena> lista){
-        
         for(Resena r: lista){
             Label t1=new Label();
             t1.setText(r.getCompania());
-            
+            nombreUsado.addLast(r.getJuego());
 
             int numEstrell = r.getValoracion();
             HBox h=new HBox();
@@ -128,6 +144,7 @@ public class VistaJuegoController implements Initializable {
             t2.setText(r.getComentario());
             idVboxResena.getChildren().addAll(t1,h,t2);
         }
+        listausada=lista;
         
         
         
@@ -138,14 +155,74 @@ public class VistaJuegoController implements Initializable {
         return item;
     }
     
+    
+    
     @FXML
     private void CambiarResena(ActionEvent event) {
-        String item=(String) comboBoxOrdenar.getValue();
-       
-        if(item.equals("Mejor Calificación")){
-            
+         ArrayList<Resena> listanueva=new ArrayList<>();
+        for(String s: nombreUsado){
+           listanueva=Juego.ResenaxJuego(s, ListaRese);
         }
-    }
         
-    
+        
+        String item = (String) comboBoxOrdenar.getValue();
+        idVboxResena.getChildren().clear();
+
+        PriorityQueue<Resena> presena = new PriorityQueue<>((r1, r2) -> {
+            return r2.getValoracion() - r1.getValoracion();
+        });
+        for (Resena r : listanueva) {
+            presena.offer(r);
+        }
+
+        PriorityQueue<Resena> presena2 = new PriorityQueue<>((r1, r2) -> {
+            return r1.getValoracion() - r2.getValoracion();
+        });
+        for (Resena r : listanueva) {
+            presena2.offer(r);
+        }
+        if (item.equals("Mejor Calificación")) {
+            while (!presena.isEmpty()) {
+                Resena r = presena.poll();
+                Label t1 = new Label();
+                t1.setText(r.getCompania());
+
+                int numEstrell = r.getValoracion();
+                HBox h = new HBox();
+                for (int j = 0; j < numEstrell; j++) {
+                    Image i = new Image("img/estrella.jpg");
+                    ImageView imv = new ImageView(i);
+                    imv.setFitWidth(20);
+                    imv.setFitHeight(20);
+                    h.getChildren().add(imv);
+                }
+                Text t2 = new Text();
+                t2.setText(r.getComentario());
+                idVboxResena.getChildren().addAll(t1, h, t2);
+            }
+        } else if (item.equals("Peor Calificación")) {
+            while (!presena2.isEmpty()) {
+                Resena r = presena2.poll();
+                Label t1 = new Label();
+                t1.setText(r.getCompania());
+
+                int numEstrell = r.getValoracion();
+                HBox h = new HBox();
+                for (int j = 0; j < numEstrell; j++) {
+                    Image i = new Image("img/estrella.jpg");
+                    ImageView imv = new ImageView(i);
+                    imv.setFitWidth(20);
+                    imv.setFitHeight(20);
+                    h.getChildren().add(imv);
+                }
+                Text t2 = new Text();
+                t2.setText(r.getComentario());
+                idVboxResena.getChildren().addAll(t1, h, t2);
+            }
+        }else{
+            dibujar(listanueva);
+        }
+
+    }
+
 }

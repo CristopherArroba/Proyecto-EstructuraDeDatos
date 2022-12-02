@@ -239,7 +239,7 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
         return sb.toString();
     }
     
-    
+ //coincidan   
     public List<E> findAll(E element, Comparator<E> cmp) {
         List<E> resultado = new ArrayList<>();
         for (E e : this) {
@@ -249,7 +249,7 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
         }
         return resultado;
     }
-
+//menores de un element
     public List<E> findLower(E element, Comparator<E> cmp) {
         List<E> resultado = new ArrayList<>();
         for (E e : this) {
