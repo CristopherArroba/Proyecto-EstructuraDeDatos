@@ -30,7 +30,14 @@ public class Juego implements Serializable{
     private double precio;
     private ArrayList<Resena> resena;
     private String genero;
+
     private static final long serialVersionUID = 8799656478674716638L;
+
+
+    private String compania;
+    //private static final long serialVersionUID = 8799656478674716638L;
+
+
 
     public Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania) {
         this.titulo = titulo;
