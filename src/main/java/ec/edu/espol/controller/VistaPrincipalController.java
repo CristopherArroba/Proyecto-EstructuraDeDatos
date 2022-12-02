@@ -117,7 +117,7 @@ public class VistaPrincipalController implements Initializable {
                 FXMLLoader fxmlloader = App.loadFXMLLoader("VistaJuego");
                 App.setRoot(fxmlloader);
                 VistaJuegoController vjc = fxmlloader.getController();             
-                vjc.cargarImagen(j);
+                vjc.cargarImagen(j);         
             } catch (IOException ex) {
                 Alert a = new Alert(AlertType.ERROR,"No se pudo abrir el archivo del siguiente grafo de scene");
                 a.show();

@@ -21,6 +21,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -45,20 +46,55 @@ public class VistaJuegoController implements Initializable {
     @FXML
     private ComboBox comboBoxOrdenar;
 
+    @FXML
     private VBox vboxprin;
 
 
     private  ArrayList<Resena> ListaRese;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        this.ListaRese=Resena.leerResena();
-       ArrayList<String> listJuego=Juego.NombreJuego(ListaRese);
-       ArrayList<String> lita=new ArrayList<>();
        
-      
+       
+       comboBoxOrdenar.getItems().add("Mejor Calificación");
+       comboBoxOrdenar.getItems().add("Peor Calificación");
+       
+        //System.out.println(tit.getText());
+       
+       ArrayList<Resena> lista=Juego.ResenaxJuego(tit1.getText(), ListaRese);
+       
+       
+       for(Resena r: lista){
+           VBox vbox=new VBox(); 
+           Text t=new Text();
+           t.setText(r.getCompania());
+           
+            HBox hbox=new HBox();
+            int numEstrell=r.getValoracion();
+            for(int j = 0; j <=numEstrell; j++) {
+                Image i = new Image("img/estrella.jpg");
+                ImageView imv = new ImageView(i);
+                imv.setFitWidth(20);
+                imv.setFitHeight(20);
+                hbox.getChildren().add(imv); 
+            }
+            vbox.getChildren().add(t);
+            vbox.getChildren().add(hbox);
+            Text t2=new Text();
+            t2.setText(r.getComentario());
+            vbox.getChildren().add(t2);
+            idVboxResena.getChildren().add(vbox);
+       }
+       
+       
+       /*
+      if(comboBoxOrdenar.getValue().equals("Mejor Calificacion")){
+          
+      }*/
       
         
         

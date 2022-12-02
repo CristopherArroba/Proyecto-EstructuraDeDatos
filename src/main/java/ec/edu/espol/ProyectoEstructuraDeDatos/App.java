@@ -64,6 +64,8 @@ public class App extends Application {
 //        ArrayList<Juego> juegos4 = new ArrayList<>();
 //        
         ArrayList<Resena> resenas =Resena.leerResena();
+        
+        
             //ArrayList<Resena> resenas = new ArrayList<>();
 //        for(Resena r: resenas){
 //            System.out.println(r);
