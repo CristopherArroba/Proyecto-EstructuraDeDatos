@@ -33,6 +33,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -45,8 +46,6 @@ public class VistaPrincipalController implements Initializable {
     private AnchorPane idAnchor;
     @FXML
     private ComboBox<?> idComboBox;
-    @FXML
-    private TextField TxtBusqueda;
     @FXML
     private Button anterior;
     @FXML
@@ -129,6 +128,8 @@ public class VistaPrincipalController implements Initializable {
     private CircularDoubleLinkedList<Juego> juegos = Juego.leerJuegos("juegos.ser");
     private ListIterator<Juego> lit = juegos.listIterator();
     private Juego j = lit.next();
+    @FXML
+    private Text resultado;
     
 
     /**
