@@ -5,10 +5,14 @@
 package ec.edu.espol.model;
 
 
+import ec.edu.espol.proyectoestructuradedatos.App;
 import ec.edu.espol.util.ArrayList;
 import ec.edu.espol.util.CircularDoubleLinkedList;
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
@@ -26,7 +30,6 @@ public class Juego implements Serializable{
     private double precio;
     private ArrayList<Resena> resena;
     private String genero;
-    private String compania;
     private static final long serialVersionUID = 8799656478674716638L;
 
     public Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania) {
@@ -36,7 +39,6 @@ public class Juego implements Serializable{
         this.precio = precio;
         this.resena = resena;
         this.genero = genero;
-        this.compania = compania;
     }
 
     public String getAnio() {
@@ -71,15 +73,7 @@ public class Juego implements Serializable{
         this.resena = resena;
     }
 
-    public String getCompania() {
-        return compania;
-    }
-
-    public void setCompania(String compania) {
-        this.compania = compania;
-    }
-
-    
+       
     
 
     public String getTitulo() {
@@ -98,12 +92,13 @@ public class Juego implements Serializable{
         this.descripcion = descripcion;
     }
 
-    
-
     @Override
     public String toString() {
-        return "Juego{" + "Titulo: " + titulo + ", Anio: " + anio + ", reseña=" + resena + ", Descripcion: " + descripcion + '}';
+        return "Juego{" + "titulo=" + titulo + ", anio=" + anio + ", descripcion=" + descripcion + ", precio=" + precio + ", resena=" + resena + ", genero=" + genero + '}';
     }
+
+    
+
     
     public static CircularDoubleLinkedList<Juego> leerJuegos(String nomfile){
         try(FileInputStream file = new FileInputStream(nomfile);
@@ -131,6 +126,17 @@ public class Juego implements Serializable{
         }
     }
     
+    public static void escribirJuego(Juego j)  {
+        try(BufferedWriter bf=new BufferedWriter(new FileWriter(App.pathFile+"Juego.txt",true))){
+                bf.write(j.toString());
+                bf.newLine();
+                bf.close();
+            
+        } catch (IOException ex) {
+            System.out.println("No se pudo guardar en el archivo paciente");;
+        }
+    }
+
     
     
     

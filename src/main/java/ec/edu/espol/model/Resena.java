@@ -71,9 +71,11 @@ public class Resena implements Serializable{
 
     @Override
     public String toString() {
-        return compania + "|" + juego + "|"+ valoracion + "|" + comentario ;
+        return "Resena{" + "compania=" + compania +", valoracion=" + valoracion + ", comentario=" + comentario + '}';
     }
 
+    
+    
     public static ArrayList<Resena> leerResena(){
         ArrayList<Resena> ListRese=new ArrayList<>();
         try(BufferedReader bf=new BufferedReader(new FileReader(App.pathFile+"Resena.txt"))){
@@ -85,6 +87,8 @@ public class Resena implements Serializable{
                         
                                 
             }            
+        }catch (FileNotFoundException ex) {
+            System.out.println("Clase no encontrada");
         }catch (IOException ex) {
             Alert a = new Alert(Alert.AlertType.ERROR, "No es posible obtener los usuarios");
             a.show();
