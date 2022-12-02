@@ -23,6 +23,8 @@ public interface List <E> {
     boolean isEmpty();
     E get(int index);
     boolean contains(E e);
-    boolean remove(int index);    
+    boolean remove(int index);   
+    void concatenar(List<E>l2);
+    List<E> eliminarRepetidos();
     
 }

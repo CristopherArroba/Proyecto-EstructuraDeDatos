@@ -62,38 +62,38 @@ public class VistaPrincipalController implements Initializable {
     private VBox vboxID;
     private  ArrayList<Resena> ListaRese;
 
-<<<<<<< HEAD
-    private void buscar(MouseEvent event) {
-        String bus = buscador.getText().toString();
-        ArrayList<Resena> resenas = Resena.leerResena();
-        
-        // Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania)
-        
-        Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
-        
 
-        List<Juego> j1 = leerJuegos("Juego.txt").findAll(jt, new TituloComparator());
+//    private void buscar(MouseEvent event) {
+//        String bus = buscador.getText().toString();
+//        ArrayList<Resena> resenas = Resena.leerResena();
+//        
+//        // Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania)
+//        
+//        Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
+//        
+//
+//        List<Juego> j1 = leerJuegos("Juego.txt").findAll(jt, new TituloComparator());
+//
+//        Juego jA = new Juego("", bus, "", 0, resenas, "", "");
+//        List<Juego> j2 = leerJuegos("Juego.txt").findAll(jA, new AnioComparator());
+///*
+//        List<Juego> j1 = Juego.leerJuegos("juegos.ser").findAll(jt, new TituloComparator());
+//        System.out.println(j1.getFirst().toString());
+//        Juego jA = new Juego("", bus, "", 0, resenas, "", "");
+//        List<Juego> j2 = Juego.leerJuegos("juegos.ser").findAll(jA, new AnioComparator());
+//*/
+//
+//        String[] busparts = bus.split(" ");
+//        String part1 = busparts[0];
+//
+//        String part2 = busparts[1];
+//
+//        Juego jAT = new Juego(part1, part2, "", 0, resenas, "", "");
+//        List<Juego> j3 = Juego.leerJuegos("juegos.ser").findAll(jAT, new AnioTituloComparator());
+//        Alert a = new Alert(AlertType.INFORMATION, j1.toString());
+//
+//    }
 
-        Juego jA = new Juego("", bus, "", 0, resenas, "", "");
-        List<Juego> j2 = leerJuegos("Juego.txt").findAll(jA, new AnioComparator());
-/*
-        List<Juego> j1 = Juego.leerJuegos("juegos.ser").findAll(jt, new TituloComparator());
-        System.out.println(j1.getFirst().toString());
-        Juego jA = new Juego("", bus, "", 0, resenas, "", "");
-        List<Juego> j2 = Juego.leerJuegos("juegos.ser").findAll(jA, new AnioComparator());
-*/
-
-        String[] busparts = bus.split(" ");
-        String part1 = busparts[0];
-
-        String part2 = busparts[1];
-
-        Juego jAT = new Juego(part1, part2, "", 0, resenas, "", "");
-        List<Juego> j3 = Juego.leerJuegos("juegos.ser").findAll(jAT, new AnioTituloComparator());
-        Alert a = new Alert(AlertType.INFORMATION, j1.toString());
-
-    }
-=======
 //    private void buscar(MouseEvent event) {
 //        String bus = buscador.getText().toString();
 //        ArrayList<Resena> resenas = Resena.leerResena();
@@ -124,7 +124,7 @@ public class VistaPrincipalController implements Initializable {
 //        Alert a = new Alert(AlertType.INFORMATION, j1.toString());
 //
 //    }
->>>>>>> 6859867e757c91acd64777ffe6da783419e9c325
+
     
     private CircularDoubleLinkedList<Juego> juegos = Juego.leerJuegos("juegos.ser");
     private ListIterator<Juego> lit = juegos.listIterator();
@@ -197,13 +197,13 @@ public class VistaPrincipalController implements Initializable {
 
     @FXML
     private void buscando(MouseEvent event) {
-        String bus = TxtBusqueda.getText();
-        ArrayList<Resena> resenas = Resena.leerResena();
-        
-        // Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania)
-        
-        Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
-        //System.out.println(jt);
+//        String bus = TxtBusqueda.getText();
+//        ArrayList<Resena> resenas = Resena.leerResena();
+//        
+//        // Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania)
+//        
+//        Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
+//        System.out.println(jt);
 //        List<Juego> j1 = Juego.leerJuegos("juegos.ser").findAll(jt, new TituloComparator());
 //        System.out.println(j1.getFirst().toString());
 //        Juego jA = new Juego("", bus, "", 0, resenas, "", "");
@@ -216,8 +216,16 @@ public class VistaPrincipalController implements Initializable {
 //
 //        Juego jAT = new Juego(part1, part2, "", 0, resenas, "", "");
 //        List<Juego> j3 = Juego.leerJuegos("juegos.ser").findAll(jAT, new AnioTituloComparator());
-        Alert a = new Alert(AlertType.INFORMATION, "hola");
-        a.show();
+//        Alert a = new Alert(AlertType.INFORMATION, "hola");
+//        a.show();
+
+        try {
+                FXMLLoader fxmlloader = App.loadFXMLLoader("Busqueda");
+                App.setRoot(fxmlloader);
+            } catch (IOException ex) {
+                Alert a = new Alert(Alert.AlertType.ERROR,"No se pudo abrir el archivo del siguiente grafo de scene");
+                a.show();
+            }
     }
     
 }

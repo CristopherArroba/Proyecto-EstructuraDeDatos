@@ -119,6 +119,8 @@ public class Juego implements Serializable{
         return new CircularDoubleLinkedList<>();
     }
     
+    
+    
     public static void guardarJuegos(CircularDoubleLinkedList<Juego> juegos, String nomfile){
         try(FileOutputStream file = new FileOutputStream(nomfile);
 

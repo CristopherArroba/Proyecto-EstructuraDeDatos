@@ -101,7 +101,7 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
             return -1;
         }
         if (e==null){
-            return 0;//revisar porque al retornar cero, se estaría dicicendo que si está en la posicion cero
+            return -1;//revisar porque al retornar cero, se estaría dicicendo que si está en la posicion cero
             //sería -1, tambien?
         }
         for (int i =0; i<tam;i++){
@@ -109,7 +109,7 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
                 return i;
             }
         }
-        return 0;
+        return -1;
     }
 
     @Override
@@ -244,6 +244,24 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
         return sb.toString();
     }
     
+    public void concatenar(List<E>l2){
+        for(int i=0; i<l2.size(); i++){
+            this.addLast(l2.get(i));
+        }
+    
+    }
+    
+    public ArrayList<E> eliminarRepetidos(){
+        ArrayList<E> ln = new ArrayList<>();
+        for(int i=0; i<this.size(); i++){
+            if(ln.indexOf(this.get(i)) == -1){
+                ln.addLast(this.get(i));
+            }
+        }
+    
+        return ln;
+    }
+    
  //coincidan   
     public List<E> findAll(E element, Comparator<E> cmp) {
         List<E> resultado = new ArrayList<>();
@@ -284,4 +302,6 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
         }
         return resultado;
     }
+
+    
 }

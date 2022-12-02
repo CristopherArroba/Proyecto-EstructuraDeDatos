@@ -25,6 +25,15 @@ public class CircularDoubleLinkedList <E> implements List<E>, Serializable{
         first=null;
         tam=0;
     }
+
+    @Override
+    public void concatenar(List<E> l2) {
+        }
+
+    @Override
+    public CircularDoubleLinkedList<E> eliminarRepetidos() {
+        return new CircularDoubleLinkedList<E>();
+        }
    
     
      private class Node<E> implements Serializable{
@@ -378,6 +387,30 @@ public class CircularDoubleLinkedList <E> implements List<E>, Serializable{
         int i = 0;
         for (Node<E> n = this.first; i < tam; n = n.getNext()) {
             if (cmp.compare(n.getContent(), element) == 0) {
+                resultado.addLast(n.getContent());
+            }
+        i++;
+        }
+        return resultado;
+    }
+    
+    public List<E> findGreater(E element, Comparator<E> cmp) {
+        List<E> resultado = new CircularDoubleLinkedList<>();
+        int i = 0;
+        for (Node<E> n = this.first; i < tam; n = n.getNext()) {
+            if (cmp.compare(n.getContent(), element) > 0) {
+                resultado.addLast(n.getContent());
+            }
+        i++;
+        }
+        return resultado;
+    }
+    
+    public List<E> findLower(E element, Comparator<E> cmp) {
+        List<E> resultado = new CircularDoubleLinkedList<>();
+        int i = 0;
+        for (Node<E> n = this.first; i < tam; n = n.getNext()) {
+            if (cmp.compare(n.getContent(), element) < 0) {
                 resultado.addLast(n.getContent());
             }
         i++;
