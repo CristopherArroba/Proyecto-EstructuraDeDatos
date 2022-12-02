@@ -7,6 +7,7 @@ package ec.edu.espol.controller;
 import ec.edu.espol.model.AnioComparator;
 import ec.edu.espol.model.AnioTituloComparator;
 import ec.edu.espol.model.Juego;
+import ec.edu.espol.model.PrecioComparator;
 import ec.edu.espol.model.Resena;
 import ec.edu.espol.model.TituloComparator;
 import ec.edu.espol.proyectoestructuradedatos.App;
