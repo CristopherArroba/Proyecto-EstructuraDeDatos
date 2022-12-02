@@ -64,13 +64,18 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
         if(e==null){
             return false;
         }
+        if (tam == capacidad){
+            crecerArreglo();
+        }
         if (arreglo[tam]==null){
             arreglo[tam]=e;
             tam++;
         }
-        if (tam == capacidad){
-            crecerArreglo();
-        }
+//        if (arreglo[tam++]==null){
+//            arreglo[tam++]=e;
+//            tam++;
+//        }
+        
         return true;
     }
 
@@ -235,7 +240,7 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
         for(int i = 0; i < (tam-1); i++){
             sb.append(this.arreglo[i]).append(",");
         }
-        sb.append(this.arreglo[tam-1]);
+        sb.append(this.arreglo[tam]);
         return sb.toString();
     }
     
