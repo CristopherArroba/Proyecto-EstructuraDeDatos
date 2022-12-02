@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaJuegoController.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\Archivos.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaAdmiController.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Resena.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Validaciones.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Juego.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\RegistroController.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Main1.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Compania.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\TituloComparator.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaUsuarioCriticoController.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\LoginController.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\RegistroException.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\RequerimientosMinimos.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\List.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaUsuarioNormalController.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\ValoracionComparator.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\module-info.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\AnioTituloComparator.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\ArrayList.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\WishListController.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Usuario.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\PrincipalController.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaPrincipalController.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\CircularDoubleLinkedList.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\ProyectoEstructuraDeDatos\App.java
+C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\AnioComparator.java
+=======
 C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaUsuarioCriticoController.java
 C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Resena.java
 C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\Archivos.java
@@ -25,3 +54,4 @@ C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\e
 C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\CircularDoubleLinkedList.java
 C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\ProyectoEstructuraDeDatos\App.java
 C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaPrincipalController.java
+>>>>>>> 6859867e757c91acd64777ffe6da783419e9c325
