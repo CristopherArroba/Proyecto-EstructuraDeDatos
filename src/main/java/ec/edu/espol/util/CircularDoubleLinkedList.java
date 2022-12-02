@@ -380,6 +380,7 @@ public class CircularDoubleLinkedList <E> implements List<E>, Serializable{
             if (cmp.compare(n.getContent(), element) == 0) {
                 resultado.addLast(n.getContent());
             }
+        i++;
         }
         return resultado;
     }

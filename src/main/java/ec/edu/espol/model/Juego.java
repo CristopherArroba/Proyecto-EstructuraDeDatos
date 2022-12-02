@@ -44,7 +44,7 @@ public class Juego implements Serializable{
         this.anio = anio;
         this.descripcion = descripcion;
         this.precio = precio;
-        this.resena = new ArrayList<>();
+        this.resena = resena;
         this.genero = genero;
         this.compania = compania;
     }

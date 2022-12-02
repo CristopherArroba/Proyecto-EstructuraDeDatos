@@ -109,7 +109,7 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
                 return i;
             }
         }
-        return 0;
+        return -1;
     }
 
     @Override
@@ -244,6 +244,23 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
         return sb.toString();
     }
     
+    public void concatenar(ArrayList<E>l2){
+        for(int i=0; i<l2.size(); i++){
+            this.addLast(l2.get(i));
+        }
+    
+    }
+    
+    public ArrayList<E> eliminarRepetidos(){
+        ArrayList<E> ln = new ArrayList<>();
+        for(int i=0; i<this.size(); i++){
+            if(ln.indexOf(this.get(i)) == -1){
+                ln.addLast(this.get(i));
+            }
+        }
+    
+        return ln;
+    }
     
     public List<E> findAll(E element, Comparator<E> cmp) {
         List<E> resultado = new ArrayList<>();
@@ -284,4 +301,6 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
         }
         return resultado;
     }
+    
+    
 }

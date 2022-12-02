@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ListIterator;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -105,7 +106,7 @@ public class VistaPrincipalController implements Initializable {
         Image i = new Image("img/"+j.getTitulo()+"/"+j.getTitulo()+"-cap1.jpg");
         imv.setImage(i);
         this.ListaRese=Resena.leerResena();
-        System.out.println(ListaRese);
+        //System.out.println(ListaRese);
     }    
 
     @FXML
@@ -113,6 +114,7 @@ public class VistaPrincipalController implements Initializable {
         j = lit.previous();
         Image i = new Image("img/"+j.getTitulo()+"/"+j.getTitulo()+"-cap1.jpg");
         imv.setImage(i);
+        
     }
 
     @FXML
@@ -167,7 +169,7 @@ public class VistaPrincipalController implements Initializable {
         // Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania)
         
         Juego jt = new Juego(bus, "", "", 0, resenas, "", "");
-        System.out.println(jt);
+        //System.out.println(jt);
 //        List<Juego> j1 = Juego.leerJuegos("juegos.ser").findAll(jt, new TituloComparator());
 //        System.out.println(j1.getFirst().toString());
 //        Juego jA = new Juego("", bus, "", 0, resenas, "", "");
