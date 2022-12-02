@@ -19,6 +19,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 /**
@@ -35,6 +36,8 @@ public class VistaJuegoController implements Initializable {
     private Button bregresar;
     @FXML
     private Text tit1;
+    @FXML
+    private VBox vboxprin;
 
     /**
      * Initializes the controller class.
