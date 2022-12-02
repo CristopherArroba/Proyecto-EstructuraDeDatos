@@ -26,6 +26,7 @@ public class App extends Application {
 
     private static Scene scene;
     public static String pathFile="src/main/resources/files/";
+    //Prueba
 
     
     @Override
