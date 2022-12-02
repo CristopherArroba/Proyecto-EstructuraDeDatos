@@ -30,12 +30,7 @@ public class Juego implements Serializable{
     private double precio;
     private ArrayList<Resena> resena;
     private String genero;
-<<<<<<< HEAD
     private static final long serialVersionUID = 8799656478674716638L;
-=======
-    private String compania;
-    //private static final long serialVersionUID = 8799656478674716638L;
->>>>>>> f8e49619cb4d5408377aec9d1ae1ddc53dffeabc
 
     public Juego(String titulo, String anio, String descripcion, double precio, ArrayList<Resena> resena, String genero, String compania) {
         this.titulo = titulo;
@@ -101,8 +96,6 @@ public class Juego implements Serializable{
     public String toString() {
         return "Juego{" + "titulo=" + titulo + ", anio=" + anio + ", descripcion=" + descripcion + ", precio=" + precio + ", resena=" + resena + ", genero=" + genero + '}';
     }
-
-    
 
     
     public static CircularDoubleLinkedList<Juego> leerJuegos(String nomfile){

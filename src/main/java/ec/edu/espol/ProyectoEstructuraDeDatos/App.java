@@ -74,11 +74,7 @@ public class App extends Application {
 //        Compania comp2 = new Compania("Capcom", juegos2, resenas);
 //        Compania comp3 = new Compania("Nintendo", juegos3, resenas);
 //        Compania comp4 = new Compania("Ubisoft", juegos4, resenas);
-<<<<<<< HEAD
-//        
-=======
-        
->>>>>>> f8e49619cb4d5408377aec9d1ae1ddc53dffeabc
+
 //        Juego juego1 = new Juego("NBA Jam", "2010", "hagamos un 2 contra 2, a híper velocidad, con las mejores parejas de cada equipo. No estaba Michael Jordan, OK. Pero sí estaban Reggie Miller, Isiah Thomas, Pippen, Ewing, Larry Johnson, Charles Barkley, Kemp, Mutombo, Olajuwon, Divac y la dupla Stockton-Malone.", 10, resenas, "deporte", "Sega");
 //        Juego juego2 = new Juego("Mortal Kombat II", "2011", "Más violencia, más sangre (bastante más sangre), más personajes, más escenarios. Nuevos modos de fatalities (la Babality o la Friendship, por ejemplo). Baraka, Mileena, Kitana, Kung Lao, entre otros, se suman al repertorio de luchadores.", 0, resenas, "pelea", "Sega");
 //        Juego juego3 = new Juego("Dragon ball z", "2012", "modo historia o al modo vs y elegir entre los once guerreros: Goku, Vegeta, Trunks, Gohan, Piccoro, Nro 18, Freezer, Cell, el Capitán Ginyu y Reecome y Krillin.", 20, resenas, "pelea", "Sega");
@@ -115,13 +111,12 @@ public class App extends Application {
         
         //Añadir al archivo serializado los juegos
         
-<<<<<<< HEAD
-        CircularDoubleLinkedList<Juego> juegosP = Juego.leerJuegos("juegos.ser");
+        //CircularDoubleLinkedList<Juego> juegosP = Juego.leerJuegos("juegos.ser");
         
-=======
+
 //        CircularDoubleLinkedList<Juego> juegosP = Juego.leerJuegos("juegos.ser");
 //        
->>>>>>> f8e49619cb4d5408377aec9d1ae1ddc53dffeabc
+
 //        juegosP.addLast(juego1);
 //        juegosP.addLast(juego2);
 //        juegosP.addLast(juego3);
@@ -133,13 +128,13 @@ public class App extends Application {
 //        juegosP.addLast(juego8);
 //        juegosP.addLast(juego9);
 //        juegosP.addLast(juego10);
-<<<<<<< HEAD
+
         
-        Juego.guardarJuegos(juegosP,"juegos.ser");
-=======
+        //Juego.guardarJuegos(juegosP,"juegos.ser");
+
 //        
 //        Juego.guardarJuegos(juegosP,"juegos.ser");
->>>>>>> f8e49619cb4d5408377aec9d1ae1ddc53dffeabc
+
 //        CircularDoubleLinkedList<Juego> juegos1 = Juego.leerJuegos("juegos.ser");
 //        System.out.println(juegos1);
         launch();
