@@ -40,9 +40,13 @@ public class VistaJuegoController implements Initializable {
     @FXML
     private Text tit1;
     @FXML
+
     private VBox idVboxResena;
     @FXML
     private ComboBox comboBoxOrdenar;
+
+    private VBox vboxprin;
+
 
     private  ArrayList<Resena> ListaRese;
     /**
@@ -52,8 +56,8 @@ public class VistaJuegoController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
        this.ListaRese=Resena.leerResena();
        ArrayList<String> listJuego=Juego.NombreJuego(ListaRese);
-       ArrayList<String> lita=new ArrayList<>
-       comboBoxOrdenar.setItems();
+       ArrayList<String> lita=new ArrayList<>();
+       
       
       
         
