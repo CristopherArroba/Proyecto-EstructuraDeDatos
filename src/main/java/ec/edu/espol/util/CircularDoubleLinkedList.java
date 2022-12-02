@@ -360,11 +360,17 @@ public class CircularDoubleLinkedList <E> implements List<E>, Serializable{
     
     public List<E> findAll(E element, Comparator<E> cmp) {
         List<E> resultado = new ArrayList<>();
-        for (E e : this) {
-            if (cmp.compare(e, element) == 0) {
-                resultado.addLast(e);
-            }
+//        for (E e : this) {
+//            if (cmp.compare(e, element) == 0) {
+//                resultado.addLast(e);
+//            }
+        int i = 0;
+        for (Node<E> n = this.first; i < tam; n = n.getNext()){
+            resultado.addLast(n.getContent()) ;
+            i++;
+//        return "CircularDoubleLinkedList{" + '}';
         }
+
         return resultado;
     }
 }
