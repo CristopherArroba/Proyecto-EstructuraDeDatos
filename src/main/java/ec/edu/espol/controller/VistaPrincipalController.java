@@ -166,7 +166,7 @@ public class VistaPrincipalController implements Initializable {
                 vjc.cargarImagen(j);   
                 vjc.setTitulo(j.getTitulo());
                 ArrayList<Resena> lista=Juego.ResenaxJuego(j.getTitulo(), ListaRese);
-                
+                vjc.setLabels(j.getDescripcion());
                 vjc.dibujar(lista);
             } catch (IOException ex) {
                 Alert a = new Alert(AlertType.ERROR,"No se pudo abrir el archivo del siguiente grafo de scene");
