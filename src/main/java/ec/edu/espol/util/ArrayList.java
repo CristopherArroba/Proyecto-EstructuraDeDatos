@@ -6,6 +6,7 @@
 package ec.edu.espol.util;
 
 import java.io.Serializable;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Objects;
 
@@ -236,5 +237,46 @@ public class ArrayList <E> implements List <E>, Iterable<E>, Serializable{
         }
         sb.append(this.arreglo[tam-1]);
         return sb.toString();
+    }
+    
+    
+    public List<E> findAll(E element, Comparator<E> cmp) {
+        List<E> resultado = new ArrayList<>();
+        for (E e : this) {
+            if (cmp.compare(e, element) == 0) {
+                resultado.addLast(e);
+            }
+        }
+        return resultado;
+    }
+
+    public List<E> findLower(E element, Comparator<E> cmp) {
+        List<E> resultado = new ArrayList<>();
+        for (E e : this) {
+            if (cmp.compare(e, element) < 0) {
+                resultado.addLast(e);
+            }
+        }
+        return resultado;
+    }
+
+    public List<E> findGreater(E element, Comparator<E> cmp) {
+        List<E> resultado = new ArrayList<>();
+        for (E e : this) {
+            if (cmp.compare(e, element) > 0) {
+                resultado.addLast(e);
+            }
+        }
+        return resultado;
+    }
+
+    public List<E> findBetween(E element1, E element2, Comparator<E> cmp) {
+        List<E> resultado = new ArrayList<>();
+        for (E e : this) {
+            if (cmp.compare(e, element1) >= 0 && cmp.compare(e, element2) <= 0) {
+                resultado.addLast(e);
+            }
+        }
+        return resultado;
     }
 }

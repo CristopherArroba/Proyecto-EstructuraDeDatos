@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controller.VistaPrincipalController">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controller.VistaPrincipalController">
   <content>
     <AnchorPane fx:id="idAnchor" minHeight="0.0" minWidth="0.0" opacity="0.86" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" styleClass="root" stylesheets="@Style.css">
          <children>
@@ -31,6 +31,7 @@
                         <Button mnemonicParsing="false" text="Nuevo y destacable" />
                         <ComboBox fx:id="idComboBox" prefWidth="150.0" />
                         <TextField fx:id="TxtBusqueda" />
+                        <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscar" text="Buscar" />
                      </children>
                   </HBox>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DESTACADOS Y RECOMENDADOS">

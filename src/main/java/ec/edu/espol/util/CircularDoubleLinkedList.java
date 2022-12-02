@@ -6,6 +6,7 @@
 package ec.edu.espol.util;
 
 import java.io.Serializable;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.ListIterator;
 
@@ -355,5 +356,15 @@ public class CircularDoubleLinkedList <E> implements List<E>, Serializable{
         }
         
     return s;
+    }
+    
+    public List<E> findAll(E element, Comparator<E> cmp) {
+        List<E> resultado = new ArrayList<>();
+        for (E e : this) {
+            if (cmp.compare(e, element) == 0) {
+                resultado.addLast(e);
+            }
+        }
+        return resultado;
     }
 }
