@@ -17,7 +17,6 @@ ec\edu\espol\model\Usuario.class
 ec\edu\espol\controller\VistaUsuarioNormalController.class
 ec\edu\espol\util\CircularDoubleLinkedList$1.class
 module-info.class
-ec\edu\espol\controller\VistaPrincipalController.class
 ec\edu\espol\util\CircularDoubleLinkedList.class
 ec\edu\espol\util\List.class
 ec\edu\espol\model\RegistroException.class

@@ -155,6 +155,7 @@ public class Juego implements Serializable{
     
     public static ArrayList<Resena> ResenaxJuego(String nameJuego, ArrayList<Resena> ListaRese){
         ArrayList<Resena> resulList=new ArrayList<>();
+        System.out.println(ListaRese);
         for(Resena r: ListaRese){
             if(r.getJuego().equals(nameJuego)){
                 resulList.addLast(r);

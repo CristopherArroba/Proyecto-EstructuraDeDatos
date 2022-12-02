@@ -150,23 +150,23 @@ public class App extends Application {
         //Juego.guardarJuegos(juegosP,"juegos.ser");
 
 
-        CircularDoubleLinkedList<Juego> juegosP = Juego.leerJuegos("juegos.ser");
+//        CircularDoubleLinkedList<Juego> juegosP = Juego.leerJuegos("juegos.ser");
+//////        
+////
+//        juegosP.addLast(juego1);
+//        juegosP.addLast(juego2);
+//        juegosP.addLast(juego3);
+//        juegosP.addLast(juego4);
+//        juegosP.addLast(juego5);
+//
+//        juegosP.addLast(juego6);
+//        juegosP.addLast(juego7);
+//        juegosP.addLast(juego8);
+//        juegosP.addLast(juego9);
+//        juegosP.addLast(juego10);
+//
 //        
-
-        juegosP.addLast(juego1);
-        juegosP.addLast(juego2);
-        juegosP.addLast(juego3);
-        juegosP.addLast(juego4);
-        juegosP.addLast(juego5);
-
-        juegosP.addLast(juego6);
-        juegosP.addLast(juego7);
-        juegosP.addLast(juego8);
-        juegosP.addLast(juego9);
-        juegosP.addLast(juego10);
-
-        
-        Juego.guardarJuegos(juegosP,"juegos.ser");
+//        Juego.guardarJuegos(juegosP,"juegos.ser");
 
 
 //        
