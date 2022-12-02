@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\RequerimientosMinimos.java
 C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\Archivos.java
 C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaAdmiController.java
@@ -21,3 +22,28 @@ C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\j
 C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\LoginController.java
 C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\AnioComparator.java
 C:\Users\USER\Desktop\PROYECTO-ESTRUCTURAS\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\RegistroException.java
+=======
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\RegistroController.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaUsuarioCriticoController.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\RegistroException.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\module-info.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Resena.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\RequerimientosMinimos.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\Archivos.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaAdmiController.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\AnioComparator.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\List.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Compania.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\ArrayList.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Usuario.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Validaciones.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\TituloComparator.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Juego.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\model\Main1.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\PrincipalController.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\LoginController.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\util\CircularDoubleLinkedList.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaUsuarioNormalController.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\ProyectoEstructuraDeDatos\App.java
+C:\Users\User\Documents\GitHub\Proyecto-EstructuraDeDatos\src\main\java\ec\edu\espol\controller\VistaPrincipalController.java
+>>>>>>> f8e49619cb4d5408377aec9d1ae1ddc53dffeabc
