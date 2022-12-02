@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controller.BusquedaController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.86" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" styleClass="root" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controller.BusquedaController">
    <left>
       <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <content>
@@ -19,8 +19,8 @@
    <center>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Text fx:id="tit" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="JUSTIFY" />
-            <Text fx:id="desc" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="JUSTIFY" />
+            <Text fx:id="tit" fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" />
+            <Text fx:id="desc" fill="#fffdfd" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" />
          </children>
       </VBox>
    </center>
