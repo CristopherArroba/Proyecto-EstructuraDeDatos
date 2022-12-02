@@ -75,5 +75,15 @@ public class LoginController implements Initializable {
         }
     
     }
+
+    @FXML
+    private void Regresar(ActionEvent event) {
+        try {
+            FXMLLoader fxmlloader=App.loadFXMLLoader("VistaPrincipal");
+            App.setRoot(fxmlloader);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
     
 }

@@ -110,7 +110,7 @@ public class RegistroController implements Initializable {
     @FXML
     private void Regresar(ActionEvent event) {
         try {
-            FXMLLoader fxml=App.loadFXMLLoader("VistaUsuarioNormal");
+            FXMLLoader fxml=App.loadFXMLLoader("VistaPrincipal");
             App.setRoot(fxml);
         } catch (IOException ex) {
             ex.printStackTrace();

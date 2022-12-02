@@ -31,6 +31,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
@@ -55,10 +56,10 @@ public class VistaPrincipalController implements Initializable {
     @FXML
     private Button btnBuscar;
 
-    @FXML
     private TextField buscador;
-
     @FXML
+    private VBox vboxID;
+
     private void buscar(MouseEvent event) {
         String bus = buscador.getText().toString();
         ArrayList<Resena> resenas = Resena.leerResena();
@@ -121,6 +122,31 @@ public class VistaPrincipalController implements Initializable {
                 Alert a = new Alert(AlertType.ERROR,"No se pudo abrir el archivo del siguiente grafo de scene");
                 a.show();
             }
+    }
+
+    @FXML
+    private void IniciarSesion(ActionEvent event) {
+        try {
+            FXMLLoader fxmlloader=App.loadFXMLLoader("Login");
+            App.setRoot(fxmlloader);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        
+    }
+
+    @FXML
+    private void Registrar(ActionEvent event) {
+        try {
+            FXMLLoader fxmlloader=App.loadFXMLLoader("Registro");
+            App.setRoot(fxmlloader);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void buscar(ActionEvent event) {
     }
     
 }

@@ -46,6 +46,7 @@ public class Juego implements Serializable{
         this.precio = precio;
         this.resena = resena;
         this.genero = genero;
+        this.compania=compania;
     }
 
     public String getAnio() {
@@ -141,6 +142,27 @@ public class Juego implements Serializable{
             System.out.println("No se pudo guardar en el archivo paciente");;
         }
     }
+    
+    public static ArrayList<String> NombreJuego(ArrayList<Resena> lista){
+        ArrayList<String> listJuego=new ArrayList<>();
+        for(Resena r:lista){
+            listJuego.addLast(r.getJuego());
+        }
+        return listJuego;
+               
+    }
+    
+    
+    public static ArrayList<Resena> ResenaxJuego(String nameJuego, ArrayList<Resena> ListaRese){
+        ArrayList<Resena> resulList=new ArrayList<>();
+        for(Resena r: ListaRese){
+            if(r.getJuego().equals(nameJuego)){
+                resulList.addLast(r);
+            }
+        }
+        return resulList;
+    }
+    
 
     
     
