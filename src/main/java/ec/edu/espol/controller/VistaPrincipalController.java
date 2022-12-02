@@ -85,7 +85,7 @@ public class VistaPrincipalController implements Initializable {
     
     private CircularDoubleLinkedList<Juego> juegos = Juego.leerJuegos("juegos.ser");
     private ListIterator<Juego> lit = juegos.listIterator();
-    Juego j = lit.next();
+    private Juego j = lit.next();
     
 
     /**
